@@ -43,10 +43,15 @@ jobs:
         run: |
           want="bank-v$(python -c 'import json;print(json.load(open("protocol-bank/manifest.json"))["version"])')"
           test "$want" = "${GITHUB_REF_NAME}" || { echo "Tag ${GITHUB_REF_NAME} != $want"; exit 1; }
-      - name: Publish release with BUNDLE.md
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build Gemini skill package
+        run: python scripts/build_gemini_skill.py
+      - name: Publish release with BUNDLE.md and the Gemini skill
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" protocol-bank/BUNDLE.md \
+          gh release create "${GITHUB_REF_NAME}" protocol-bank/BUNDLE.md dist/creativity-presentation-orchestrator-gemini.zip \
             --title "Protocol bank ${GITHUB_REF_NAME}" \
             --notes "Pinned bundle URL: https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${GITHUB_REF_NAME}/presentation-protocol-engine/protocol-bank/BUNDLE.md"

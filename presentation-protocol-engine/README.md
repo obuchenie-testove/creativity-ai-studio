@@ -29,6 +29,8 @@ The **skill** runs the work; **GitHub** keeps the standards it works by. The ski
 
 Install the folder `skills/creativity-presentation-orchestrator/` (SKILL.md + scripts/) as an Agent Skill, or paste `SKILL.md` into the platform's custom instructions. Nothing else is needed: the skill loads the bank from GitHub by the routes above.
 
+**Gemini app skill:** Gemini skills cannot run scripts that use the internet, so `python scripts/build_gemini_skill.py` builds a separate package `dist/creativity-presentation-orchestrator-gemini.zip` (SKILL.md + the protocol bank as reference files, no resolver). Upload it in Gemini → Skills → Create → Upload. If the repository is imported into a chat, the skill uses a newer bank version from it. The package is attached to every `bank-v*` release; re-upload it after each release.
+
 ```bash
 python skills/creativity-presentation-orchestrator/scripts/resolve.py \
   --topic "Нов продукт" --goal "Одобрение" --audience "Ръководство" --slides 12 --thinking auto
@@ -61,5 +63,5 @@ All protocols are `pilot`. 14 presentation and 6 thinking approaches are adapted
 
 ## Changelog
 
-- **0.2.0** — Access routes for every platform (resolver, repository import, one URL, uploaded copy); jsDelivr fallback; single-file `BUNDLE.md`; `bank_version`/`bank_digest` identity; offline `--snapshot-commit`; bilingual BG/EN tags and specificity priorities; Cyrillic word-start matching; `--thinking auto`; tie and slide-count warnings; enforcement of required core protocols, allowed status, defaults and safe paths; resolver moved into the skill folder; 32 tests; CI and release workflow. Protocol files unchanged.
+- **0.2.0** — Access routes for every platform (resolver, repository import, one URL, uploaded copy); jsDelivr fallback; single-file `BUNDLE.md`; `bank_version`/`bank_digest` identity; offline `--snapshot-commit`; bilingual BG/EN tags and specificity priorities; Cyrillic word-start matching; `--thinking auto`; tie and slide-count warnings; enforcement of required core protocols, allowed status, defaults and safe paths; resolver moved into the skill folder; 32 tests; CI and release workflow; Gemini app skill package. Protocol files unchanged.
 - **0.1.0** — Initial pilot.
