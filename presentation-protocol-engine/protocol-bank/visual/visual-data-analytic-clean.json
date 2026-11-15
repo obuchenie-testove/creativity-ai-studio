@@ -1,0 +1,27 @@
+{
+  "id": "visual-data-analytic-clean",
+  "title": "Data Analytic Clean",
+  "summary": "Data Analytic Clean",
+  "version": "0.1.0",
+  "rules": [
+    "Използвай точни оси, означения, единици и източници.",
+    "Графиките трябва да отговарят на конкретен аналитичен въпрос.",
+    "Без декоративни 3D графики или подвеждащи мащаби."
+  ],
+  "constraints": [
+    "Поддържай достъпна типографска йерархия и проверим контраст.",
+    "Не смесвай произволно несъвместими стилове."
+  ],
+  "evaluation": [
+    "Четивност на реален екран",
+    "Единна визуална система",
+    "Подходящ избор за аудитория и задача"
+  ],
+  "legacy_catalog_label": "Data Analytic Clean",
+  "legacy_source_url": "https://ai.futureeducation.eu/present_library_v1/data_analytic_clean_visual_style_v1.json",
+  "legacy_original_not_verified": true,
+  "protocol_schema": "creativity.presentation-protocol/1.0",
+  "kind": "visual",
+  "status": "pilot",
+  "origin_note": "Newly defined adaptation from label in CreAItivity Presentation Prompt Generator (2026-03-13); old remote JSON was not accessible and is NOT claimed to be imported"
+}

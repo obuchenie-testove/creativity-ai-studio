@@ -1,0 +1,27 @@
+{
+  "id": "visual-tech-futuristic",
+  "title": "Tech Futuristic",
+  "summary": "Tech Futuristic",
+  "version": "0.1.0",
+  "rules": [
+    "Използвай геометрични структури, модерни контрасти и пестелив светлинен акцент.",
+    "Запази висока четимост и реално съдържание.",
+    "Футуристична естетика не означава непроверени бъдещи твърдения."
+  ],
+  "constraints": [
+    "Поддържай достъпна типографска йерархия и проверим контраст.",
+    "Не смесвай произволно несъвместими стилове."
+  ],
+  "evaluation": [
+    "Четивност на реален екран",
+    "Единна визуална система",
+    "Подходящ избор за аудитория и задача"
+  ],
+  "legacy_catalog_label": "Tech Futuristic",
+  "legacy_source_url": "https://ai.futureeducation.eu/present_library_v1/tech_futuristic_visual_style_v1.json",
+  "legacy_original_not_verified": true,
+  "protocol_schema": "creativity.presentation-protocol/1.0",
+  "kind": "visual",
+  "status": "pilot",
+  "origin_note": "Newly defined adaptation from label in CreAItivity Presentation Prompt Generator (2026-03-13); old remote JSON was not accessible and is NOT claimed to be imported"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "present-scientific",
+  "title": "Научна / изследователска",
+  "summary": "Въпрос, метод, резултат и граници.",
+  "version": "0.1.0",
+  "rules": [
+    "Формулирай изследователския въпрос и контекста.",
+    "Опиши метод, извадка или корпус и ограничения.",
+    "Раздели резултати от интерпретация.",
+    "Покажи несигурност, източници и възпроизводими стъпки.",
+    "Завърши с извод и следващ въпрос."
+  ],
+  "constraints": [
+    "Нова работна чернова; изисква човешки преглед."
+  ],
+  "evaluation": [
+    "Съответства ли резултатът на основната цел и аудиторията?",
+    "Спазени ли са структурните изисквания на този протокол?",
+    "Отбелязани ли са непроверените твърдения и ограниченията?"
+  ],
+  "slide_roles": [
+    "question",
+    "method",
+    "results",
+    "limitations",
+    "conclusion"
+  ],
+  "protocol_schema": "creativity.presentation-protocol/1.0",
+  "kind": "presentation",
+  "status": "pilot",
+  "origin_note": "Adapted from Creativity Visual Protocol Studio draft (2026-10-24), not a verbatim transcription"
+}

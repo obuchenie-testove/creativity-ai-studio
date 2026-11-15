@@ -1,0 +1,27 @@
+{
+  "id": "visual-storytelling-warm",
+  "title": "Storytelling Warm",
+  "summary": "Storytelling Warm",
+  "version": "0.1.0",
+  "rules": [
+    "Топла, последователна палитра и естествена фотография/илюстрация.",
+    "Използвай последователни образи и човешки контекст.",
+    "Не създавай фалшива документална автентичност."
+  ],
+  "constraints": [
+    "Поддържай достъпна типографска йерархия и проверим контраст.",
+    "Не смесвай произволно несъвместими стилове."
+  ],
+  "evaluation": [
+    "Четивност на реален екран",
+    "Единна визуална система",
+    "Подходящ избор за аудитория и задача"
+  ],
+  "legacy_catalog_label": "Storytelling Warm",
+  "legacy_source_url": "https://ai.futureeducation.eu/present_library_v1/storytelling_warm_visual_style_v1.json",
+  "legacy_original_not_verified": true,
+  "protocol_schema": "creativity.presentation-protocol/1.0",
+  "kind": "visual",
+  "status": "pilot",
+  "origin_note": "Newly defined adaptation from label in CreAItivity Presentation Prompt Generator (2026-03-13); old remote JSON was not accessible and is NOT claimed to be imported"
+}

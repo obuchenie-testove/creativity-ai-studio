@@ -1,0 +1,27 @@
+{
+  "id": "visual-minimalist-focus",
+  "title": "Minimalist Focus",
+  "summary": "Minimalist Focus",
+  "version": "0.1.0",
+  "rules": [
+    "Един фокус и ясно визуално подчинение на второстепенните елементи.",
+    "Остави достатъчно празно пространство; използвай стабилна типография.",
+    "Ограничи декоративните акценти и текстовата плътност."
+  ],
+  "constraints": [
+    "Поддържай достъпна типографска йерархия и проверим контраст.",
+    "Не смесвай произволно несъвместими стилове."
+  ],
+  "evaluation": [
+    "Четивност на реален екран",
+    "Единна визуална система",
+    "Подходящ избор за аудитория и задача"
+  ],
+  "legacy_catalog_label": "Minimalist Focus",
+  "legacy_source_url": "https://ai.futureeducation.eu/present_library_v1/minimalist_focus_visual_style_v1.json",
+  "legacy_original_not_verified": true,
+  "protocol_schema": "creativity.presentation-protocol/1.0",
+  "kind": "visual",
+  "status": "pilot",
+  "origin_note": "Newly defined adaptation from label in CreAItivity Presentation Prompt Generator (2026-03-13); old remote JSON was not accessible and is NOT claimed to be imported"
+}

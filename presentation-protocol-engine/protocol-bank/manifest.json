@@ -1,0 +1,812 @@
+{
+  "manifest_schema": "creativity.presentation-manifest/1.0",
+  "project": "Creativity Presentation Protocol Engine",
+  "version": "0.1.0",
+  "release_status": "pilot",
+  "owner": "Creativity LTD / Креативност ЕООД",
+  "updated_on": "2026-11-15",
+  "repository": "obuchenie-testove/creativity-ai-studio",
+  "repository_prefix": "presentation-protocol-engine",
+  "compatibility": "Read-access to public GitHub + support for Markdown instructions or Python 3.10+ helper; native slide export is host-dependent.",
+  "execution_policy": {
+    "git_snapshot": "Resolve default branch to full commit SHA once, and use only that SHA for all files.",
+    "protocol_on_missing": "fail-closed; never substitute imagined contents",
+    "required_protocols": [
+      "core-governance",
+      "core-quality",
+      "core-output"
+    ],
+    "priority": [
+      "system/platform safety",
+      "explicit user constraints",
+      "core protocols",
+      "selected presentation",
+      "selected visual",
+      "optional thinking"
+    ],
+    "review_required": true,
+    "default_presentation": "present-classic-business",
+    "default_visual": "visual-clean",
+    "selection_limits": {
+      "presentation": 1,
+      "visual": 1,
+      "thinking": 1
+    },
+    "version_validation": "SHA-256 over UTF-8 raw bytes of each protocol JSON, then check id/version/schema."
+  },
+  "entries": [
+    {
+      "id": "think-first-principles",
+      "kind": "thinking",
+      "title": "Първи принципи",
+      "path": "thinking/think-first-principles.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Изведи решението от проверени основи, вместо от готови аналогии.",
+      "tags": [
+        "first principles",
+        "fundamentals",
+        "първи принципи"
+      ],
+      "priority": 30,
+      "dependencies": [],
+      "sha256": "deacdf44b3ae5a5dee1b2e342d9f0018f3269e7af14a389af3b046a3541426b8"
+    },
+    {
+      "id": "think-systems",
+      "kind": "thinking",
+      "title": "Системно мислене",
+      "path": "thinking/think-systems.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Покажи участниците, зависимостите и обратните връзки.",
+      "tags": [
+        "system",
+        "ecosystem",
+        "система",
+        "взаимозависим"
+      ],
+      "priority": 30,
+      "dependencies": [],
+      "sha256": "6c3d32f3a03b30cb3cad1fac206e3c456139eb37b446b2a8487a7e1043596904"
+    },
+    {
+      "id": "think-evidence",
+      "kind": "thinking",
+      "title": "Твърдение → доказателство",
+      "path": "thinking/think-evidence.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Подреди тезите според силата и границите на доказателствата.",
+      "tags": [
+        "evidence",
+        "claim",
+        "доказателства",
+        "факти"
+      ],
+      "priority": 30,
+      "dependencies": [],
+      "sha256": "62d5bdabe92786feee3bc4a58c403e4256f86f529493d993c73092021deccf7f"
+    },
+    {
+      "id": "think-backward",
+      "kind": "thinking",
+      "title": "От резултата назад",
+      "path": "thinking/think-backward.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Планирай съдържанието от желаното действие на аудиторията.",
+      "tags": [
+        "backward",
+        "outcome",
+        "резултат"
+      ],
+      "priority": 30,
+      "dependencies": [],
+      "sha256": "e6e3ca7b5567595ce9e4d4980e0db746c56456edfdc3b399f164f9e887ae131e"
+    },
+    {
+      "id": "think-decision",
+      "kind": "thinking",
+      "title": "Сравнение и решение",
+      "path": "thinking/think-decision.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Сравни реални варианти по явни критерии.",
+      "tags": [
+        "decision",
+        "options",
+        "решение",
+        "сравнение"
+      ],
+      "priority": 30,
+      "dependencies": [],
+      "sha256": "2cc250cc64b4c1dccc73630091e35cb517cc53849272b43f51b51f466f80b1fc"
+    },
+    {
+      "id": "think-problem-solution",
+      "kind": "thinking",
+      "title": "Проблем → решение → проверка",
+      "path": "thinking/think-problem-solution.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Организирай действието около конкретна нужда.",
+      "tags": [
+        "problem",
+        "solution",
+        "проблем",
+        "решение"
+      ],
+      "priority": 30,
+      "dependencies": [],
+      "sha256": "5bf7923d93210f7639c9f1446a2dd2d129451164b072752387ef4c56310086f7"
+    },
+    {
+      "id": "present-minimalist",
+      "kind": "presentation",
+      "title": "Минималистична",
+      "path": "presentation/present-minimalist.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Едно послание и много свободно пространство.",
+      "tags": [
+        "minimal",
+        "minimalist",
+        "кратка",
+        "визуална",
+        "simplify"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "26fb782e878c3198c82cee5281b1b21239a381459c3eec1b0cb19c7d10f37c35"
+    },
+    {
+      "id": "present-storytelling",
+      "kind": "presentation",
+      "title": "Разказ / Storytelling",
+      "path": "presentation/present-storytelling.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "История с ясно движение и проверим извод.",
+      "tags": [
+        "story",
+        "storytelling",
+        "разказ",
+        "история",
+        "път"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "d1a90dec1bc3d735664e7321ac15d4d1caf497fc74d5c6a8247198e7ffff5df7"
+    },
+    {
+      "id": "present-data-driven",
+      "kind": "presentation",
+      "title": "Водена от данни",
+      "path": "presentation/present-data-driven.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Изводи и решения, подкрепени от предоставени данни.",
+      "tags": [
+        "data",
+        "analytics",
+        "kpi",
+        "report data",
+        "данни",
+        "статистик"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "cbf92a855008d72fae8c4f3b51ee6506eed807c7fd52ca25e5662ff1f2c6c9a1"
+    },
+    {
+      "id": "present-ted",
+      "kind": "presentation",
+      "title": "Една силна идея / TED-подобна",
+      "path": "presentation/present-ted.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Убедително представяне около една централна идея.",
+      "tags": [
+        "ted",
+        "inspirational",
+        "keynote",
+        "идея",
+        "вдъхнов"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "a8979f10525adc76b4e323c9e6904579431edfa20bdacdd95404cc94ef4d9424"
+    },
+    {
+      "id": "present-takahashi",
+      "kind": "presentation",
+      "title": "Takahashi",
+      "path": "presentation/present-takahashi.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Кратки типографски слайдове и жив ритъм.",
+      "tags": [
+        "takahashi",
+        "ключови думи",
+        "силен акцент"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "a1aa5294e348c17b6ec9c29f22b99028d9812857c302dfcb4129b688393d821e"
+    },
+    {
+      "id": "present-pechakucha",
+      "kind": "presentation",
+      "title": "PechaKucha",
+      "path": "presentation/present-pechakucha.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Фиксиран ритъм: 20 слайда по 20 секунди.",
+      "tags": [
+        "pechakucha",
+        "pecha kucha",
+        "20x20"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "2cce7216f8f6cc0d36a02be328e776d25bdc656f06587c3dc11dbb4bc4871484"
+    },
+    {
+      "id": "present-interactive",
+      "kind": "presentation",
+      "title": "Интерактивна",
+      "path": "presentation/present-interactive.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Редуване на представяне и участие.",
+      "tags": [
+        "interactive",
+        "интерактив",
+        "workshop",
+        "участие"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "4c7531b9958dca081070e54fb23349aadc2d284191a820c500e28b73ad243a76"
+    },
+    {
+      "id": "present-visual-metaphor",
+      "kind": "presentation",
+      "title": "Визуална метафора",
+      "path": "presentation/present-visual-metaphor.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Една обяснена метафора свързва идеите.",
+      "tags": [
+        "visual metaphor",
+        "метафора",
+        "аналогия"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "e3bdd1772c8aeac258051e9b6d37acfa69fdc3c3a2ecb55935c6bb7661ca4709"
+    },
+    {
+      "id": "present-classic-business",
+      "kind": "presentation",
+      "title": "Класическа бизнес",
+      "path": "presentation/present-classic-business.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Контекст, анализ, решение и действие.",
+      "tags": [
+        "corporate",
+        "board",
+        "business",
+        "executive",
+        "бизнес"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "d920cae8a19b16028588038fba4102d9020b6a9090c6ef14e2ecf554d533ad1a"
+    },
+    {
+      "id": "present-bildungsansatz",
+      "kind": "presentation",
+      "title": "Образователен подход",
+      "path": "presentation/present-bildungsansatz.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Понятие, пример, практика и рефлексия.",
+      "tags": [
+        "educational",
+        "school",
+        "lesson",
+        "учебна",
+        "урок"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "406e175b7ef112e1bd55b77ef0b07df5fb9d30e7e649e3e1074d60b0a8af4bb4"
+    },
+    {
+      "id": "present-pitch",
+      "kind": "presentation",
+      "title": "Представяне на предложение",
+      "path": "presentation/present-pitch.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "От нужда до ясно искане за решение.",
+      "tags": [
+        "pitch",
+        "startup",
+        "investor",
+        "финансиране",
+        "продаж"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "48febc6c3021f6c0f94e1faf7a69b13fe72033a7cfd7cade5d28472159a21fc8"
+    },
+    {
+      "id": "present-scientific",
+      "kind": "presentation",
+      "title": "Научна / изследователска",
+      "path": "presentation/present-scientific.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Въпрос, метод, резултат и граници.",
+      "tags": [
+        "scientific",
+        "academic",
+        "research",
+        "научна",
+        "изследване"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "a0ed692aca6c16af180b849a084f38deb40580bc91fdf6eb8a2fe6aa1d65c67b"
+    },
+    {
+      "id": "present-report",
+      "kind": "presentation",
+      "title": "Отчет / напредък",
+      "path": "presentation/present-report.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "План, постигнато, отклонения и следващи действия.",
+      "tags": [
+        "report",
+        "performance",
+        "отчет",
+        "резултат",
+        "статус"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "7ad2a0066457022ac2999966dedf8cb1dc06128b9ea18d6e76d0f4a1111fa525"
+    },
+    {
+      "id": "present-workshop",
+      "kind": "presentation",
+      "title": "Практическо обучение",
+      "path": "presentation/present-workshop.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Участникът завършва с конкретен проверим резултат.",
+      "tags": [
+        "training",
+        "workshop",
+        "обучение",
+        "практически"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "d1628e9f59d9d5546a291bf6c1fafc00b418a9dca1fdd4c810ae080469a993c4"
+    },
+    {
+      "id": "visual-clean",
+      "kind": "visual",
+      "title": "Ясен корпоративен",
+      "path": "visual/visual-clean.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Спокойна типография, ясна йерархия и функционални схеми.",
+      "tags": [
+        "corporate",
+        "classic",
+        "professional",
+        "business",
+        "корпоратив"
+      ],
+      "priority": 45,
+      "dependencies": [],
+      "sha256": "064db4158d1a32c4e8688c0ee9f12cb774b751b2e3c7942e403fb747d13909d1"
+    },
+    {
+      "id": "visual-editorial",
+      "kind": "visual",
+      "title": "Топъл редакционен колаж",
+      "path": "visual/visual-editorial.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Хартиени текстури, учебни материали и ръчно рисувани акценти.",
+      "tags": [
+        "storytelling",
+        "human",
+        "editorial",
+        "история",
+        "топъл"
+      ],
+      "priority": 45,
+      "dependencies": [],
+      "sha256": "18efb5a10fcfea1e1c452538435b4ada435ad82da6e266b1c879a2d0b20e240f"
+    },
+    {
+      "id": "visual-precise",
+      "kind": "visual",
+      "title": "Точни данни и инфографики",
+      "path": "visual/visual-precise.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Стойностите и отношенията определят визуалната форма.",
+      "tags": [
+        "data",
+        "analytical",
+        "chart",
+        "scientific",
+        "данни",
+        "отчет"
+      ],
+      "priority": 45,
+      "dependencies": [],
+      "sha256": "4676d6658ec1276c6d9595a82b07d9e943736352bce05bed101f0ef648fb3099"
+    },
+    {
+      "id": "visual-minimalist-focus",
+      "kind": "visual",
+      "title": "Minimalist Focus",
+      "path": "visual/visual-minimalist-focus.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Чист минимализъм",
+      "tags": [
+        "minimalist",
+        "simple",
+        "concise"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "8205f3665efc6403dff59dddb25475ad5a7545df5bea0415362d32dd0749e3e1"
+    },
+    {
+      "id": "visual-cinematic-dramatic",
+      "kind": "visual",
+      "title": "Cinematic Dramatic",
+      "path": "visual/visual-cinematic-dramatic.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Кинематографичен контраст",
+      "tags": [
+        "cinematic",
+        "keynote",
+        "драматична"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "7f22b9e27b1cbaf4aadb100e6c2673c367b701391e83100214409e8deb4440f0"
+    },
+    {
+      "id": "visual-storytelling-warm",
+      "kind": "visual",
+      "title": "Storytelling Warm",
+      "path": "visual/visual-storytelling-warm.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Топъл разказ",
+      "tags": [
+        "story",
+        "storytelling",
+        "разказ",
+        "човешки"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "fbf975f49381e590e8478436b805311b47e71795e5777dc67d6c98be2d8d8803"
+    },
+    {
+      "id": "visual-data-analytic-clean",
+      "kind": "visual",
+      "title": "Data Analytic Clean",
+      "path": "visual/visual-data-analytic-clean.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Аналитично изчистен",
+      "tags": [
+        "data",
+        "analytics",
+        "metrics",
+        "данни"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "cfa7108a81e1f3b2e9e3ed6d2b8fb5bfaacdf7441351c7eb16d1fa2d759d91f4"
+    },
+    {
+      "id": "visual-ted-inspirational",
+      "kind": "visual",
+      "title": "TED Inspirational",
+      "path": "visual/visual-ted-inspirational.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Сценичен вдъхновяващ",
+      "tags": [
+        "ted",
+        "inspiration",
+        "keynote"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "f4db7bbe8eb6cfbb27d3bae5c748248c9379434d79c4406ff466bd0c5503f4bd"
+    },
+    {
+      "id": "visual-dynamic-keyword-impact",
+      "kind": "visual",
+      "title": "Dynamic Keyword Impact",
+      "path": "visual/visual-dynamic-keyword-impact.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Динамични ключови думи",
+      "tags": [
+        "takahashi",
+        "keyword",
+        "кратка"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "ff1966b15faaf13cf7e2778280836287f50d98237a0631651c09b504789bee64"
+    },
+    {
+      "id": "visual-interactive-learning",
+      "kind": "visual",
+      "title": "Interactive Learning",
+      "path": "visual/visual-interactive-learning.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Интерактивно участие",
+      "tags": [
+        "interactive",
+        "workshop",
+        "обучение"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "f059535bf4d542e94db706aecd0d451be8e09bef77d7e8a0f01bc03741eae81f"
+    },
+    {
+      "id": "visual-visual-metaphor-conceptual",
+      "kind": "visual",
+      "title": "Visual Metaphor Conceptual",
+      "path": "visual/visual-visual-metaphor-conceptual.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Концептуална метафора",
+      "tags": [
+        "metaphor",
+        "conceptual",
+        "метафора"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "cb549d95a7a6fe31296d1a3166b7ed75c81216103be25a7bc40616a85d6b0494"
+    },
+    {
+      "id": "visual-classic-corporate",
+      "kind": "visual",
+      "title": "Classic Corporate",
+      "path": "visual/visual-classic-corporate.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Корпоративен стандарт",
+      "tags": [
+        "corporate",
+        "business",
+        "executive",
+        "бизнес"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "bd91cdba11aaf0caf659392cfca512ace48673cb078d85443c16f61dbdfd1deb"
+    },
+    {
+      "id": "visual-academic-research",
+      "kind": "visual",
+      "title": "Academic Research",
+      "path": "visual/visual-academic-research.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Академичен дизайн",
+      "tags": [
+        "scientific",
+        "research",
+        "academic",
+        "научна"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "9eb63773a5a9c8a7c2b2023cf39a559d6ec40604f40347d739155894b3eaf9c5"
+    },
+    {
+      "id": "visual-tech-futuristic",
+      "kind": "visual",
+      "title": "Tech Futuristic",
+      "path": "visual/visual-tech-futuristic.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Технологична футуристичност",
+      "tags": [
+        "ai",
+        "tech",
+        "technology",
+        "технологии"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "2ae97dd6dec0c6bf1b4940a56ad532d704e6e21f3d1b2b8447024e79343fdfde"
+    },
+    {
+      "id": "visual-emotional-artistic",
+      "kind": "visual",
+      "title": "Emotional Artistic",
+      "path": "visual/visual-emotional-artistic.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Емоционално художествен",
+      "tags": [
+        "art",
+        "creative",
+        "emotional",
+        "изкуство"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "4d2930a16b19750cb00c5b0c5ec53241bb61e354f786d9637aa58ede2cd794c4"
+    },
+    {
+      "id": "visual-infographic-educational",
+      "kind": "visual",
+      "title": "Infographic Educational",
+      "path": "visual/visual-infographic-educational.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Инфографична яснота",
+      "tags": [
+        "infographic",
+        "process",
+        "explain",
+        "схема"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "f2e3107f2da2c4c7870fb4a974feadf9c62f3552133821b3c7f94312973be785"
+    },
+    {
+      "id": "visual-heritage-historical",
+      "kind": "visual",
+      "title": "Heritage Historical",
+      "path": "visual/visual-heritage-historical.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Историческо наследство",
+      "tags": [
+        "history",
+        "heritage",
+        "historical",
+        "история"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "79b00a3f4a4b3315ec4ac924ebe15701f9a9ba08a2f6e8c6f21fd48904ff6d27"
+    },
+    {
+      "id": "visual-visionary-conceptual",
+      "kind": "visual",
+      "title": "Visionary Conceptual",
+      "path": "visual/visual-visionary-conceptual.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Визионерски концепции",
+      "tags": [
+        "vision",
+        "strategy",
+        "concept",
+        "бъдеще"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "e3453ef74ddcfe05636525e6c5037c163eb428c8467db33e89215b56c34185f8"
+    },
+    {
+      "id": "core-governance",
+      "kind": "core",
+      "title": "Правила за изпълнение",
+      "path": "core/core-governance.json",
+      "version": "1.0.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Правила за изпълнение",
+      "tags": [
+        "governance"
+      ],
+      "priority": 100,
+      "dependencies": [],
+      "sha256": "9586f9b02e7060e5ee10a40e6cc17996d94e7ae34cffd2afddcca8043bdd1bb0"
+    },
+    {
+      "id": "core-quality",
+      "kind": "core",
+      "title": "Редакционен и визуален одит",
+      "path": "core/core-quality.json",
+      "version": "1.0.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Редакционен и визуален одит",
+      "tags": [
+        "quality"
+      ],
+      "priority": 100,
+      "dependencies": [],
+      "sha256": "1723d482b92ef3a5b9b2d5d61d5c67b6d3272e433280c80ee9a0211dae111755"
+    },
+    {
+      "id": "core-output",
+      "kind": "core",
+      "title": "Структура на резултата",
+      "path": "core/core-output.json",
+      "version": "1.0.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Структура на резултата",
+      "tags": [
+        "output"
+      ],
+      "priority": 100,
+      "dependencies": [],
+      "sha256": "61014e6fc799baf691f5a708786f7fba55d6ce62b1cd17dacd175fab988e4073"
+    }
+  ]
+}

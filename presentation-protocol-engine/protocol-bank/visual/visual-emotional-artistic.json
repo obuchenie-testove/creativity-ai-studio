@@ -1,0 +1,27 @@
+{
+  "id": "visual-emotional-artistic",
+  "title": "Emotional Artistic",
+  "summary": "Emotional Artistic",
+  "version": "0.1.0",
+  "rules": [
+    "Цветът и композицията изграждат емоционална дъга.",
+    "Прилагай ограничен набор художествени похвати последователно.",
+    "Емоционалният акцент не заменя яснота и достоверност."
+  ],
+  "constraints": [
+    "Поддържай достъпна типографска йерархия и проверим контраст.",
+    "Не смесвай произволно несъвместими стилове."
+  ],
+  "evaluation": [
+    "Четивност на реален екран",
+    "Единна визуална система",
+    "Подходящ избор за аудитория и задача"
+  ],
+  "legacy_catalog_label": "Emotional Artistic",
+  "legacy_source_url": "https://ai.futureeducation.eu/present_library_v1/emotional_artistic_visual_style_v1.json",
+  "legacy_original_not_verified": true,
+  "protocol_schema": "creativity.presentation-protocol/1.0",
+  "kind": "visual",
+  "status": "pilot",
+  "origin_note": "Newly defined adaptation from label in CreAItivity Presentation Prompt Generator (2026-03-13); old remote JSON was not accessible and is NOT claimed to be imported"
+}
