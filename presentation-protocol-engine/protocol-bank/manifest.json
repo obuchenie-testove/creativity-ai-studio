@@ -1,7 +1,7 @@
 {
   "manifest_schema": "creativity.presentation-manifest/1.0",
   "project": "Creativity Presentation Protocol Engine",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "release_status": "pilot",
   "owner": "Creativity LTD / Креативност ЕООД",
   "updated_on": "2026-11-15",
@@ -9,7 +9,7 @@
   "repository_prefix": "presentation-protocol-engine",
   "compatibility": "Read-access to public GitHub + support for Markdown instructions or Python 3.10+ helper; native slide export is host-dependent.",
   "execution_policy": {
-    "git_snapshot": "Resolve default branch to full commit SHA once, and use only that SHA for all files.",
+    "git_snapshot": "Resolve the default branch to one full commit SHA and read every file at that SHA (raw.githubusercontent.com, or the jsDelivr mirror of the same SHA). Platforms that import the repository instead report bank_version and bank_digest.",
     "protocol_on_missing": "fail-closed; never substitute imagined contents",
     "required_protocols": [
       "core-governance",
@@ -32,7 +32,14 @@
       "visual": 1,
       "thinking": 1
     },
-    "version_validation": "SHA-256 over UTF-8 raw bytes of each protocol JSON, then check id/version/schema."
+    "version_validation": "SHA-256 over UTF-8 raw bytes of each protocol JSON, then check id/version/schema.",
+    "allowed_status": [
+      "pilot",
+      "approved"
+    ],
+    "selection_rule": "Host AI selects by meaning (title, when, tags) against the brief; the resolver scores bilingual tags as a deterministic fallback. Higher entry priority = more specific protocol and wins ties; remaining ties are reported as ambiguous.",
+    "bank_identity": "bank_version = manifest.version; bank_digest = SHA-256 of manifest.json bytes (covers every protocol hash). Release tags bank-v<version> map a version to a commit.",
+    "thinking_selection": "Optional. Explicit ID, or \"auto\" to select by tags; omitted otherwise."
   },
   "entries": [
     {
@@ -66,7 +73,9 @@
         "system",
         "ecosystem",
         "система",
-        "взаимозависим"
+        "взаимозависим",
+        "systems",
+        "системи"
       ],
       "priority": 30,
       "dependencies": [],
@@ -85,7 +94,12 @@
         "evidence",
         "claim",
         "доказателства",
-        "факти"
+        "факти",
+        "sources",
+        "research",
+        "източници",
+        "изследван",
+        "научн"
       ],
       "priority": 30,
       "dependencies": [],
@@ -122,7 +136,10 @@
         "decision",
         "options",
         "решение",
-        "сравнение"
+        "сравнение",
+        "choose",
+        "избор",
+        "вариант"
       ],
       "priority": 30,
       "dependencies": [],
@@ -202,9 +219,13 @@
         "kpi",
         "report data",
         "данни",
-        "статистик"
+        "статистик",
+        "dashboard",
+        "metrics",
+        "показател",
+        "метрик"
       ],
-      "priority": 60,
+      "priority": 65,
       "dependencies": [],
       "sha256": "cbf92a855008d72fae8c4f3b51ee6506eed807c7fd52ca25e5662ff1f2c6c9a1"
     },
@@ -242,7 +263,7 @@
         "ключови думи",
         "силен акцент"
       ],
-      "priority": 60,
+      "priority": 65,
       "dependencies": [],
       "sha256": "a1aa5294e348c17b6ec9c29f22b99028d9812857c302dfcb4129b688393d821e"
     },
@@ -260,7 +281,7 @@
         "pecha kucha",
         "20x20"
       ],
-      "priority": 60,
+      "priority": 65,
       "dependencies": [],
       "sha256": "2cce7216f8f6cc0d36a02be328e776d25bdc656f06587c3dc11dbb4bc4871484"
     },
@@ -315,9 +336,14 @@
         "board",
         "business",
         "executive",
-        "бизнес"
+        "бизнес",
+        "management",
+        "leadership",
+        "ръководств",
+        "управител",
+        "мениджмънт"
       ],
-      "priority": 60,
+      "priority": 55,
       "dependencies": [],
       "sha256": "d920cae8a19b16028588038fba4102d9020b6a9090c6ef14e2ecf554d533ad1a"
     },
@@ -335,9 +361,22 @@
         "school",
         "lesson",
         "учебна",
-        "урок"
+        "урок",
+        "education",
+        "students",
+        "pupils",
+        "teacher",
+        "lecture",
+        "learning",
+        "образование",
+        "ученик",
+        "ученици",
+        "учител",
+        "училищ",
+        "лекция",
+        "учене"
       ],
-      "priority": 60,
+      "priority": 65,
       "dependencies": [],
       "sha256": "406e175b7ef112e1bd55b77ef0b07df5fb9d30e7e649e3e1074d60b0a8af4bb4"
     },
@@ -355,9 +394,13 @@
         "startup",
         "investor",
         "финансиране",
-        "продаж"
+        "продаж",
+        "seed",
+        "fundraising",
+        "инвеститор",
+        "стартъп"
       ],
-      "priority": 60,
+      "priority": 65,
       "dependencies": [],
       "sha256": "48febc6c3021f6c0f94e1faf7a69b13fe72033a7cfd7cade5d28472159a21fc8"
     },
@@ -375,9 +418,20 @@
         "academic",
         "research",
         "научна",
-        "изследване"
+        "study",
+        "university",
+        "thesis",
+        "conference",
+        "findings",
+        "научн",
+        "научен",
+        "изследван",
+        "университет",
+        "дисертаци",
+        "конференци",
+        "методологи"
       ],
-      "priority": 60,
+      "priority": 65,
       "dependencies": [],
       "sha256": "a0ed692aca6c16af180b849a084f38deb40580bc91fdf6eb8a2fe6aa1d65c67b"
     },
@@ -395,7 +449,11 @@
         "performance",
         "отчет",
         "резултат",
-        "статус"
+        "статус",
+        "annual",
+        "quarterly",
+        "годишен",
+        "тримесеч"
       ],
       "priority": 60,
       "dependencies": [],
@@ -414,9 +472,12 @@
         "training",
         "workshop",
         "обучение",
-        "практически"
+        "seminar",
+        "уъркшоп",
+        "семинар",
+        "практическ"
       ],
-      "priority": 60,
+      "priority": 65,
       "dependencies": [],
       "sha256": "d1628e9f59d9d5546a291bf6c1fafc00b418a9dca1fdd4c810ae080469a993c4"
     },
@@ -549,7 +610,10 @@
         "data",
         "analytics",
         "metrics",
-        "данни"
+        "данни",
+        "kpi",
+        "dashboard",
+        "показател"
       ],
       "priority": 40,
       "dependencies": [],
@@ -640,7 +704,12 @@
         "corporate",
         "business",
         "executive",
-        "бизнес"
+        "бизнес",
+        "management",
+        "board",
+        "ръководств",
+        "управител",
+        "инвеститор"
       ],
       "priority": 40,
       "dependencies": [],
@@ -659,7 +728,13 @@
         "scientific",
         "research",
         "academic",
-        "научна"
+        "научна",
+        "study",
+        "university",
+        "изследван",
+        "научн",
+        "научен",
+        "университет"
       ],
       "priority": 40,
       "dependencies": [],
@@ -678,7 +753,16 @@
         "ai",
         "tech",
         "technology",
-        "технологии"
+        "artificial intelligence",
+        "digital",
+        "software",
+        "startup",
+        "ии",
+        "изкуствен интелект",
+        "технолог",
+        "дигитал",
+        "софтуер",
+        "стартъп"
       ],
       "priority": 40,
       "dependencies": [],
@@ -716,7 +800,15 @@
         "infographic",
         "process",
         "explain",
-        "схема"
+        "схема",
+        "education",
+        "students",
+        "pupils",
+        "образование",
+        "ученик",
+        "ученици",
+        "училищ",
+        "обяснен"
       ],
       "priority": 40,
       "dependencies": [],
@@ -735,7 +827,12 @@
         "history",
         "heritage",
         "historical",
-        "история"
+        "история",
+        "museum",
+        "исторически",
+        "възраждане",
+        "наследство",
+        "музей"
       ],
       "priority": 40,
       "dependencies": [],
