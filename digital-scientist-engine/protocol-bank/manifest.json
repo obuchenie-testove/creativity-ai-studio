@@ -1,0 +1,339 @@
+{
+  "manifest_schema": "creativity.ds-manifest/1.0",
+  "project": "Creativity Digital Scientist Protocol Engine",
+  "version": "0.1.0",
+  "release_status": "pilot",
+  "owner": "Creativity LTD / Креативност ЕООД",
+  "updated_on": "2026-11-16",
+  "repository": "obuchenie-testove/creativity-ai-studio",
+  "repository_prefix": "digital-scientist-engine",
+  "compatibility": "Read access to public GitHub + Markdown instructions; optional Python 3.10+ resolver. Scholarly MCP/API access is host-dependent.",
+  "visibility_note": "PUBLIC layer only. Internal Creativity protocols (full skill bank, internal source-processing methodology, internal knowledge representation) are NOT in this repository and are supplied privately when authorised.",
+  "execution_policy": {
+    "git_snapshot": "Resolve default branch to full commit SHA once, and use only that SHA for all files.",
+    "protocol_on_missing": "fail-closed; never substitute imagined contents",
+    "required_protocols": [
+      "core-governance",
+      "core-identity",
+      "core-output"
+    ],
+    "priority": [
+      "system/platform safety",
+      "explicit human constraints",
+      "core protocols",
+      "roles",
+      "task",
+      "sources"
+    ],
+    "review_required": true,
+    "default_task": "task-literature-scan",
+    "default_roles": [
+      "role-source-scout",
+      "role-evaluator",
+      "role-completer"
+    ],
+    "selection_limits": {
+      "task": 1,
+      "role_min": 1,
+      "role_max": 5,
+      "source": 2
+    },
+    "version_validation": "SHA-256 over UTF-8 raw bytes of each protocol JSON, then check id/version/kind/schema."
+  },
+  "entries": [
+    {
+      "id": "core-governance",
+      "kind": "core",
+      "title": "Управление и епистемична проследимост",
+      "path": "core/core-governance.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги.",
+      "tags": [
+        "governance",
+        "traceability",
+        "проследимост"
+      ],
+      "priority": 100,
+      "dependencies": [],
+      "sha256": "3eb4b40e87b4e9ceda54cb616f255454e3f09efcf0b6ab2518bf1db81aacc4e6"
+    },
+    {
+      "id": "core-identity",
+      "kind": "core",
+      "title": "Идентичност, позициониране и защита на методиката",
+      "path": "core/core-identity.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги при публичен изход; за вътрешна работа — като ограничение.",
+      "tags": [
+        "brand",
+        "identity",
+        "позициониране"
+      ],
+      "priority": 95,
+      "dependencies": [],
+      "sha256": "23970d45c83668cff6efa072445806eb1656233d20c07f67bfd92ab1fc73e684"
+    },
+    {
+      "id": "core-output",
+      "kind": "core",
+      "title": "Изход и доклад за произхода",
+      "path": "core/core-output.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги.",
+      "tags": [
+        "output",
+        "provenance",
+        "доклад"
+      ],
+      "priority": 90,
+      "dependencies": [],
+      "sha256": "29099f2e07697185cd382de6ae5d65cdbe6ecfd48663118fc36899f9c8502491"
+    },
+    {
+      "id": "role-source-scout",
+      "kind": "role",
+      "title": "Търсач на източници",
+      "path": "roles/role-source-scout.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "role",
+      "when": "Когато задачата изисква литература, данни или факти.",
+      "tags": [
+        "sources",
+        "literature",
+        "източници",
+        "литература",
+        "търсене"
+      ],
+      "priority": 80,
+      "dependencies": [],
+      "sha256": "acf809f45efb139ad429bea170b3c9b2685357e12e44d0f166c282332b25fbd1"
+    },
+    {
+      "id": "role-explorer",
+      "kind": "role",
+      "title": "Изобретател",
+      "path": "roles/role-explorer.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "role",
+      "when": "Когато трябват нови идеи, хипотези или ъгли.",
+      "tags": [
+        "ideas",
+        "hypothesis",
+        "хипотеза",
+        "идеи",
+        "ъгъл"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "e28d2e3a5607fddc697e789d60b962eb48fcfd5c581be3b613eef55c6c254fad"
+    },
+    {
+      "id": "role-evaluator",
+      "kind": "role",
+      "title": "Оценител (критичен колега)",
+      "path": "roles/role-evaluator.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "role",
+      "when": "Винаги, когато има хипотеза, чернова или извод за проверка.",
+      "tags": [
+        "review",
+        "critique",
+        "проверка",
+        "критика",
+        "оценка"
+      ],
+      "priority": 85,
+      "dependencies": [],
+      "sha256": "77a5a677e5da0a28f83eee9212b538e0868f549e1c299e611ec26d8ca318a421"
+    },
+    {
+      "id": "role-specialist",
+      "kind": "role",
+      "title": "Специалист",
+      "path": "roles/role-specialist.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "role",
+      "when": "Когато има данни, текстове или тясна експертна област.",
+      "tags": [
+        "data",
+        "analysis",
+        "данни",
+        "анализ",
+        "специалист"
+      ],
+      "priority": 70,
+      "dependencies": [],
+      "sha256": "ffb3e063244df4e6f070e75e89c2b317a84856dad5490171b6a6758e93aecffe"
+    },
+    {
+      "id": "role-completer",
+      "kind": "role",
+      "title": "Завършващ",
+      "path": "roles/role-completer.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "role",
+      "when": "Винаги като последна роля.",
+      "tags": [
+        "final",
+        "assembly",
+        "финал",
+        "сглобяване"
+      ],
+      "priority": 75,
+      "dependencies": [],
+      "sha256": "7e2fa6023d26ed3eb8bd126b8995ab381d35146cfe4826d8527d8964818dfd83"
+    },
+    {
+      "id": "task-literature-scan",
+      "kind": "task",
+      "title": "Бърз преглед на литературата",
+      "path": "tasks/task-literature-scan.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "task",
+      "when": "Въпрос „какво се знае за…“.",
+      "tags": [
+        "literature",
+        "review",
+        "преглед",
+        "литература",
+        "какво се знае"
+      ],
+      "priority": 70,
+      "dependencies": [],
+      "sha256": "182879cefbb9b8b01318db3c4db276834735c055a0804b42098553a3a054ca75"
+    },
+    {
+      "id": "task-claim-check",
+      "kind": "task",
+      "title": "Проверка на твърдения и цитати",
+      "path": "tasks/task-claim-check.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "task",
+      "when": "Преди публикуване на статия или документ.",
+      "tags": [
+        "fact-check",
+        "citations",
+        "проверка на факти",
+        "цитати",
+        "твърдения"
+      ],
+      "priority": 80,
+      "dependencies": [],
+      "sha256": "07255f21359cee86907f727f120daf82a9d53a21a23a8c14859d491db3a18a77"
+    },
+    {
+      "id": "task-hypothesis-challenge",
+      "kind": "task",
+      "title": "Хипотеза под натиск",
+      "path": "tasks/task-hypothesis-challenge.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "task",
+      "when": "Когато се търси посока, идея или обяснение.",
+      "tags": [
+        "hypothesis",
+        "idea",
+        "хипотеза",
+        "посока",
+        "обяснение"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "babb1504f6a7fa819b3cc05c218ec0a455e594bb25229ca3b9342d35e59ac006"
+    },
+    {
+      "id": "task-source-structuring",
+      "kind": "task",
+      "title": "Структуриране на източник за работа",
+      "path": "tasks/task-source-structuring.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "task",
+      "when": "Когато научни текстове трябва да станат използваеми за последваща работа.",
+      "tags": [
+        "structure",
+        "protocol",
+        "структуриране",
+        "протокол",
+        "PDF"
+      ],
+      "priority": 55,
+      "dependencies": [],
+      "sha256": "b31328223223d8a2e6e77c4d99b7b29c95eff0a8f7187e93c9b39aea6902432c"
+    },
+    {
+      "id": "task-series-article",
+      "kind": "task",
+      "title": "Статия от поредицата „Дигитален учен“",
+      "path": "tasks/task-series-article.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "task",
+      "when": "Писане на статия за поредицата.",
+      "tags": [
+        "article",
+        "series",
+        "статия",
+        "поредица",
+        "блог"
+      ],
+      "priority": 75,
+      "dependencies": [],
+      "sha256": "1f0a75d7ae4d73f55a8aa0cf839e6102fed91b9e5386641119d9a1631f16da2b"
+    },
+    {
+      "id": "task-aeo-geo-review",
+      "kind": "task",
+      "title": "AEO/GEO преглед",
+      "path": "tasks/task-aeo-geo-review.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "task",
+      "when": "Преглед на чернова преди публикуване.",
+      "tags": [
+        "aeo",
+        "geo",
+        "seo",
+        "review",
+        "преглед"
+      ],
+      "priority": 70,
+      "dependencies": [],
+      "sha256": "e55996cc530529be7550cf86906653d4b1553e8b8867d5087f35a24a1686c43b"
+    },
+    {
+      "id": "source-scholarly-mcp",
+      "kind": "source",
+      "title": "Научни бази чрез MCP/API",
+      "path": "sources/source-scholarly-mcp.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "optional",
+      "when": "Когато задачата изисква научни източници.",
+      "tags": [
+        "openalex",
+        "crossref",
+        "arxiv",
+        "pubmed",
+        "semantic scholar",
+        "научни бази"
+      ],
+      "priority": 50,
+      "dependencies": [],
+      "sha256": "fc3cd8b95088282f4d2568519875acb4237831944781ed8036201426d7780708"
+    }
+  ]
+}
