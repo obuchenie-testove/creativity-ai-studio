@@ -1,0 +1,26 @@
+{
+  "id": "kg-family-team-task-adaptation-support",
+  "title": "Подкрепа при адаптация",
+  "summary": "Създаване на гъвкави планове за новоприети деца.",
+  "version": "0.1.0",
+  "rules": [
+    "Създай поетапен план с меки, гъвкави времеви рамки.",
+    "Включи конкретни идеи за преходни обекти от дома към градината.",
+    "Предложи начини за включване на родителите в началния етап.",
+    "Дефинирай индикатори за успешна адаптация (напр. спонтанна игра)."
+  ],
+  "constraints": [
+    "Забранено е налагането на строги срокове за адаптация.",
+    "Забранено е сравняването с темповете на адаптация на други деца."
+  ],
+  "evaluation": [
+    "Планът гъвкав ли е и отчита ли индивидуалния темп?",
+    "Включва ли активна, позитивна роля за семейството?"
+  ],
+  "protocol_schema": "creativity.ds-protocol/1.0",
+  "kind": "task",
+  "status": "pilot",
+  "engine": "kg-family-team",
+  "author_model": "Qwen (Alibaba)",
+  "origin_note": "Creativity LTD kindergarten digital scientist competition (2026-11-16); authored by Qwen (Alibaba), assembled by Claude; requires owner approval."
+}

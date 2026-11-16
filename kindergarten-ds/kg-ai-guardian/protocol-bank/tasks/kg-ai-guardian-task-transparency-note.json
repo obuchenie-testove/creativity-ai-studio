@@ -1,0 +1,27 @@
+{
+  "id": "kg-ai-guardian-task-transparency-note",
+  "title": "Прозрачност: как използваме AI",
+  "summary": "Подготвя кратко, спокойно обяснение за родителите как и защо учителят използва AI.",
+  "version": "0.1.0",
+  "rules": [
+    "Обясни с прости думи за какво се използва AI (подготовка на материали) и за какво не (данни за децата, самостоятелна употреба от децата).",
+    "Посочи кой проверява AI материалите преди децата.",
+    "Отговори предварително на 3 вероятни въпроса на родителите.",
+    "Дай версия до 150 думи за табло и версия до 60 думи за съобщение.",
+    "Остави място за контакт с учителя при въпроси."
+  ],
+  "constraints": [
+    "Без обещания за резултати и без реклама на инструменти.",
+    "Без информация за конкретни деца."
+  ],
+  "evaluation": [
+    "Ще се успокои ли притеснен родител след прочитане?",
+    "Казано ли е ясно какво НЕ се прави с AI?"
+  ],
+  "protocol_schema": "creativity.ds-protocol/1.0",
+  "kind": "task",
+  "status": "pilot",
+  "engine": "kg-ai-guardian",
+  "author_model": "Claude (Anthropic)",
+  "origin_note": "Creativity LTD kindergarten digital scientist competition (2026-11-16); authored by Claude (Anthropic), assembled by Claude; requires owner approval."
+}

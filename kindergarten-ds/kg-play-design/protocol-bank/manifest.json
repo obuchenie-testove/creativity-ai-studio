@@ -1,0 +1,303 @@
+{
+  "manifest_schema": "creativity.ds-manifest/1.0",
+  "project": "Creativity Kindergarten Digital Scientist — ИГРОСПИРАЛА — обратен игрови дизайн от наблюдаемото действие към игровата мисия",
+  "engine": "kg-play-design",
+  "system_name": "ИГРОСПИРАЛА — обратен игрови дизайн от наблюдаемото действие към игровата мисия",
+  "author_model": "ChatGPT (OpenAI)",
+  "version": "0.1.0",
+  "release_status": "pilot",
+  "owner": "Creativity LTD / Креативност ЕООД",
+  "updated_on": "2026-11-16",
+  "repository": "obuchenie-testove/creativity-ai-studio",
+  "repository_prefix": "kindergarten-ds/kg-play-design/protocol-bank",
+  "compatibility": "Read access to public GitHub + Markdown instructions; optional Python 3.10+ resolver (kindergarten-ds/scripts/resolve_kg.py).",
+  "visibility_note": "PUBLIC pilot layer for the kindergarten digital-scientist competition. No personal data of children, ever.",
+  "execution_policy": {
+    "git_snapshot": "Resolve default branch to full commit SHA once, and use only that SHA for all files.",
+    "protocol_on_missing": "fail-closed; never substitute imagined contents",
+    "required_protocols": [
+      "kg-play-design-core-governance",
+      "kg-play-design-core-identity",
+      "kg-play-design-core-output"
+    ],
+    "priority": [
+      "system/platform safety",
+      "child protection and privacy",
+      "explicit human constraints",
+      "core protocols",
+      "roles",
+      "task",
+      "sources"
+    ],
+    "review_required": true,
+    "default_task": "kg-play-design-task-play-situation",
+    "default_roles": [
+      "kg-play-design-role-goal-cartographer",
+      "kg-play-design-role-mission-dramaturg",
+      "kg-play-design-role-path-adapter",
+      "kg-play-design-role-completer"
+    ],
+    "completer_role": "kg-play-design-role-completer",
+    "selection_limits": {
+      "task": 1,
+      "role_min": 1,
+      "role_max": 5,
+      "source": 2
+    },
+    "version_validation": "SHA-256 over UTF-8 raw bytes of each protocol JSON, then check id/version/kind/schema."
+  },
+  "intake_questions": [
+    "За коя възрастова група (3–4, 4–5, 5–6 или 6–7 г.) е дейността?",
+    "Кое е водещото образователно направление и какво конкретно да могат да направят децата?",
+    "С какво време, пространство и материали разполагате и има ли ограничения за дейността?"
+  ],
+  "entries": [
+    {
+      "id": "kg-play-design-core-governance",
+      "kind": "core",
+      "title": "Човешко ръководство, поверителност и педагогически граници",
+      "path": "core/kg-play-design-core-governance.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Задължителен при всяка заявка, преди избор на задача и роли.",
+      "tags": [
+        "privacy",
+        "teacher-control",
+        "safety",
+        "no-diagnosis"
+      ],
+      "priority": 100,
+      "dependencies": [],
+      "sha256": "5082cda88cc90f56f532bb0855272d39fd01954dc54256c504df1d5a25205cd1"
+    },
+    {
+      "id": "kg-play-design-core-identity",
+      "kind": "core",
+      "title": "Идентичност на дигиталния учен и граница на специализацията",
+      "path": "core/kg-play-design-core-identity.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Задължителен при всяко изпълнение и всяко публично представяне на системата.",
+      "tags": [
+        "identity",
+        "play-design",
+        "kindergarten",
+        "creativity-ltd"
+      ],
+      "priority": 95,
+      "dependencies": [],
+      "sha256": "aa1e055f8eaeffadf3eb0a9c2ceb57fcb6fc2b804c8fff3df486a9af6cf65b73"
+    },
+    {
+      "id": "kg-play-design-core-output",
+      "kind": "core",
+      "title": "Изход: игрова карта и следа от педагогическото решение",
+      "path": "core/kg-play-design-core-output.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Задължителен; прилага се от завършващата роля за крайното представяне.",
+      "tags": [
+        "output",
+        "traceability",
+        "observable-action",
+        "teacher-approval"
+      ],
+      "priority": 90,
+      "dependencies": [],
+      "sha256": "8cb9c9126345ee448c435420b15916c09f48974e91dde08df3df0d62f65416d0"
+    },
+    {
+      "id": "kg-play-design-role-goal-cartographer",
+      "kind": "role",
+      "title": "Картограф на целта и видимата следа",
+      "path": "roles/kg-play-design-role-goal-cartographer.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Първа роля след избраната задача; използва се винаги.",
+      "tags": [
+        "goal",
+        "learning-action",
+        "backward-design",
+        "curriculum"
+      ],
+      "priority": 85,
+      "dependencies": [],
+      "sha256": "7a618899da2694ad612f231664c316fc250fec0e6f910425adc2317bfd9575d6"
+    },
+    {
+      "id": "kg-play-design-role-mission-dramaturg",
+      "kind": "role",
+      "title": "Драматург на игровата мисия",
+      "path": "roles/kg-play-design-role-mission-dramaturg.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "След картографа на целта при всяка игрова задача.",
+      "tags": [
+        "play",
+        "story",
+        "choice",
+        "agency"
+      ],
+      "priority": 80,
+      "dependencies": [],
+      "sha256": "bd40fcf7d69b2bc12a90275084fac1485d5ed041ec71b3b2b1b2340348802185"
+    },
+    {
+      "id": "kg-play-design-role-path-adapter",
+      "kind": "role",
+      "title": "Адаптатор на игровите пътища",
+      "path": "roles/kg-play-design-role-path-adapter.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "След драматурга и преди методическия завършващ.",
+      "tags": [
+        "age-adaptation",
+        "accessibility",
+        "participation",
+        "offline"
+      ],
+      "priority": 75,
+      "dependencies": [],
+      "sha256": "389cdc3e992eb25090d2ba4e451f801a4bc032ff8f64317a0aabcb5302f822f0"
+    },
+    {
+      "id": "kg-play-design-role-completer",
+      "kind": "role",
+      "title": "Завършващ — методически проверяващ",
+      "path": "roles/kg-play-design-role-completer.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Винаги последна роля след всички други избрани роли.",
+      "tags": [
+        "completer",
+        "quality-audit",
+        "teacher-decision",
+        "safety"
+      ],
+      "priority": 70,
+      "dependencies": [],
+      "sha256": "f6b2cdf9e43febf5aa4b93a0838b58a66b56708a9713cebba296e2cee78ed30c"
+    },
+    {
+      "id": "kg-play-design-task-play-situation",
+      "kind": "task",
+      "title": "Проектиране на игрова педагогическа ситуация",
+      "path": "tasks/kg-play-design-task-play-situation.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Задача по подразбиране: учителят иска игра или педагогическа ситуация по образователно направление.",
+      "tags": [
+        "pedagogical-situation",
+        "game",
+        "default",
+        "observable-learning"
+      ],
+      "priority": 68,
+      "dependencies": [],
+      "sha256": "632f59edbb04f4f3d7644f685449b17fab9176a5378e91c1552fc6f80f3310bb"
+    },
+    {
+      "id": "kg-play-design-task-thematic-week",
+      "kind": "task",
+      "title": "Тематична седмица като свързани игрови мисии",
+      "path": "tasks/kg-play-design-task-thematic-week.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят иска седмично тематично планиране, поредица от игри или междупредметен минипроект.",
+      "tags": [
+        "thematic-week",
+        "sequence",
+        "integration",
+        "planning"
+      ],
+      "priority": 67,
+      "dependencies": [],
+      "sha256": "6ffe91c7ddb5868466bdfd4f248c6023795ad4ec013373231b29c77c811df8ea"
+    },
+    {
+      "id": "kg-play-design-task-story-play",
+      "kind": "task",
+      "title": "Авторска приказка, която задейства игра",
+      "path": "tasks/kg-play-design-task-story-play.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят иска приказка, драматизация, куклен сюжет или интерактивен разказ.",
+      "tags": [
+        "story",
+        "literature",
+        "interactive-play",
+        "original-content"
+      ],
+      "priority": 66,
+      "dependencies": [],
+      "sha256": "707a7858a201a176bcd274ab912c31540d54c574944f5a36b15f7960f51007a7"
+    },
+    {
+      "id": "kg-play-design-task-music-movement",
+      "kind": "task",
+      "title": "Оригинална ритмична и двигателна игра",
+      "path": "tasks/kg-play-design-task-music-movement.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят иска песен, римуван текст, музикална игра или двигателна активност.",
+      "tags": [
+        "music",
+        "movement",
+        "rhythm",
+        "play"
+      ],
+      "priority": 65,
+      "dependencies": [],
+      "sha256": "bf79f36a84aa5dabc35fd6536f1d8d9bb1296e5801c4c84083d25a9a83c34eae"
+    },
+    {
+      "id": "kg-play-design-task-visual-materials",
+      "kind": "task",
+      "title": "Комплект игрови материали за работа извън екран",
+      "path": "tasks/kg-play-design-task-visual-materials.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят иска карти, табло, предметна игра, материали за печат или инструкции за генериране на изображения.",
+      "tags": [
+        "visuals",
+        "printables",
+        "hands-on",
+        "teacher-preparation"
+      ],
+      "priority": 64,
+      "dependencies": [],
+      "sha256": "91f60df97cfccd4bc10de00faccbf338308b76c24b869fdb705b365ff0aab09f"
+    },
+    {
+      "id": "kg-play-design-source-curriculum-pack",
+      "kind": "source",
+      "title": "Програмна система, нормативен ориентир и предоставени педагогически материали",
+      "path": "sources/kg-play-design-source-curriculum-pack.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Използва се при всяка задача, когато е налична програмна система, конкретен очакван резултат или достъпен актуален нормативен източник.",
+      "tags": [
+        "curriculum",
+        "normative",
+        "teacher-material",
+        "source-check"
+      ],
+      "priority": 55,
+      "dependencies": [],
+      "sha256": "5168e1bdec25a9d4a79b88c2aaee481be781b965ca8f65fbfc0d7455ebb5a06f"
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "manifest_schema": "creativity.ds-manifest/1.0",
+  "project": "Creativity Kindergarten Digital Scientist — AI Светофар",
+  "engine": "kg-ai-guardian",
+  "system_name": "AI Светофар",
+  "author_model": "Claude (Anthropic)",
+  "version": "0.1.0",
+  "release_status": "pilot",
+  "owner": "Creativity LTD / Креативност ЕООД",
+  "updated_on": "2026-11-16",
+  "repository": "obuchenie-testove/creativity-ai-studio",
+  "repository_prefix": "kindergarten-ds/kg-ai-guardian/protocol-bank",
+  "compatibility": "Read access to public GitHub + Markdown instructions; optional Python 3.10+ resolver (kindergarten-ds/scripts/resolve_kg.py).",
+  "visibility_note": "PUBLIC pilot layer for the kindergarten digital-scientist competition. No personal data of children, ever.",
+  "execution_policy": {
+    "git_snapshot": "Resolve default branch to full commit SHA once, and use only that SHA for all files.",
+    "protocol_on_missing": "fail-closed; never substitute imagined contents",
+    "required_protocols": [
+      "kg-ai-guardian-core-governance",
+      "kg-ai-guardian-core-identity",
+      "kg-ai-guardian-core-output"
+    ],
+    "priority": [
+      "system/platform safety",
+      "child protection and privacy",
+      "explicit human constraints",
+      "core protocols",
+      "roles",
+      "task",
+      "sources"
+    ],
+    "review_required": true,
+    "default_task": "kg-ai-guardian-task-content-review",
+    "default_roles": [
+      "kg-ai-guardian-role-light-keeper",
+      "kg-ai-guardian-role-child-lens",
+      "kg-ai-guardian-role-gatekeeper"
+    ],
+    "completer_role": "kg-ai-guardian-role-gatekeeper",
+    "selection_limits": {
+      "task": 1,
+      "role_min": 1,
+      "role_max": 5,
+      "source": 2
+    },
+    "version_validation": "SHA-256 over UTF-8 raw bytes of each protocol JSON, then check id/version/kind/schema."
+  },
+  "intake_questions": [
+    "Какво искате да направите с AI (приказка, песен, картинка, план, анализ) и за каква възрастова група?",
+    "Кой ще използва AI инструмента — само Вие или и децата пред екран?",
+    "Има ли готов материал за проверка (поставете го без имена и снимки на деца)?"
+  ],
+  "entries": [
+    {
+      "id": "kg-ai-guardian-core-governance",
+      "kind": "core",
+      "title": "Управление: защита на детето пред всичко",
+      "path": "core/kg-ai-guardian-core-governance.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги.",
+      "tags": [
+        "governance",
+        "безопасност",
+        "права на детето",
+        "лични данни"
+      ],
+      "priority": 100,
+      "dependencies": [],
+      "sha256": "a7cd63c0304e38f85d624c5e53aeb770adb2d748f9728598b0164bf23811f4e2"
+    },
+    {
+      "id": "kg-ai-guardian-core-identity",
+      "kind": "core",
+      "title": "Идентичност: дигитален учен „Пазител“",
+      "path": "core/kg-ai-guardian-core-identity.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги.",
+      "tags": [
+        "identity",
+        "роля",
+        "тон"
+      ],
+      "priority": 95,
+      "dependencies": [],
+      "sha256": "2637cafe7bbaeb741d65981a9bccd9114afb578fda376695aeb596eb34118ae0"
+    },
+    {
+      "id": "kg-ai-guardian-core-output",
+      "kind": "core",
+      "title": "Формат на резултата: Светофар-карта",
+      "path": "core/kg-ai-guardian-core-output.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги.",
+      "tags": [
+        "output",
+        "формат",
+        "произход"
+      ],
+      "priority": 90,
+      "dependencies": [],
+      "sha256": "30c5dcee9d73341c4c9f81f87bf0be2b6537d61b63eb9f54557f9e6d00eddc29"
+    },
+    {
+      "id": "kg-ai-guardian-role-light-keeper",
+      "kind": "role",
+      "title": "Светофарчик: класификатор на риска",
+      "path": "roles/kg-ai-guardian-role-light-keeper.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Първа роля при всяка заявка.",
+      "tags": [
+        "риск",
+        "светофар",
+        "класификация"
+      ],
+      "priority": 85,
+      "dependencies": [],
+      "sha256": "b27871f52068285f2626e12b1ff4384d16316f64b449c3fc62eebf71dced4534"
+    },
+    {
+      "id": "kg-ai-guardian-role-child-lens",
+      "kind": "role",
+      "title": "Детска леща: преглед през очите на детето",
+      "path": "roles/kg-ai-guardian-role-child-lens.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Всяко ЖЪЛТО съдържание, преди да стигне до децата.",
+      "tags": [
+        "възрастова уместност",
+        "емоции",
+        "стереотипи",
+        "преглед"
+      ],
+      "priority": 80,
+      "dependencies": [],
+      "sha256": "ec0f9d725baef5f9181f5912120a42472b2f4fd7e47d0d2db8f3d38010fe1181"
+    },
+    {
+      "id": "kg-ai-guardian-role-prompt-architect",
+      "kind": "role",
+      "title": "Архитект на безопасни промптове",
+      "path": "roles/kg-ai-guardian-role-prompt-architect.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Когато учителят ще генерира съдържание с AI.",
+      "tags": [
+        "промпт",
+        "генериране",
+        "приказка",
+        "песен",
+        "изображение"
+      ],
+      "priority": 75,
+      "dependencies": [],
+      "sha256": "e5d4e975589bb7753a18ebf3418fa0b6a6526073184c4285dc116c054330ccb8"
+    },
+    {
+      "id": "kg-ai-guardian-role-gatekeeper",
+      "kind": "role",
+      "title": "Пазител на прага (завършващ)",
+      "path": "roles/kg-ai-guardian-role-gatekeeper.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Винаги последна роля.",
+      "tags": [
+        "завършващ",
+        "проверка",
+        "контрол"
+      ],
+      "priority": 70,
+      "dependencies": [],
+      "sha256": "beb6b93deb56e90c40994bae00b4d448ad08ed190a1d96c3773ce481b179b582"
+    },
+    {
+      "id": "kg-ai-guardian-task-content-review",
+      "kind": "task",
+      "title": "Преглед на AI съдържание преди децата",
+      "path": "tasks/kg-ai-guardian-task-content-review.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят има готов AI материал и иска да го провери.",
+      "tags": [
+        "преглед",
+        "проверка",
+        "материал",
+        "съдържание"
+      ],
+      "priority": 70,
+      "dependencies": [],
+      "sha256": "d07236d147fec6d84167ad4d6db1928876b8eb26f789e125e6c763b97eac149a"
+    },
+    {
+      "id": "kg-ai-guardian-task-safe-prompt",
+      "kind": "task",
+      "title": "Безопасен промпт за приказка, песен или картинка",
+      "path": "tasks/kg-ai-guardian-task-safe-prompt.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят иска да създаде приказка, стихче, песен, картинка или сценарий с AI.",
+      "tags": [
+        "приказка",
+        "песен",
+        "картинка",
+        "промпт",
+        "сценарий"
+      ],
+      "priority": 65,
+      "dependencies": [],
+      "sha256": "533679692c1404197d54a1f3f668e96876d3797545e3cf6d24cd45f3c36cecb9"
+    },
+    {
+      "id": "kg-ai-guardian-task-ai-use-check",
+      "kind": "task",
+      "title": "Мога ли да използвам AI за това?",
+      "path": "tasks/kg-ai-guardian-task-ai-use-check.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят пита дали дадена употреба на AI е подходяща.",
+      "tags": [
+        "преценка",
+        "употреба",
+        "може ли",
+        "решение"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "0b188a3b9f56a86b3b69cbe4e20ee170e461feff45e618c4eaf7669887364f2b"
+    },
+    {
+      "id": "kg-ai-guardian-task-group-ai-rules",
+      "kind": "task",
+      "title": "Правила за AI в групата или детската градина",
+      "path": "tasks/kg-ai-guardian-task-group-ai-rules.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят, екипът или директорът искат общи правила за AI.",
+      "tags": [
+        "правила",
+        "политика",
+        "екип",
+        "екранно време"
+      ],
+      "priority": 55,
+      "dependencies": [],
+      "sha256": "5449f0c5e88f45dac72f3ddfe8397b182894bd26002738d38e27ddaa2cd5d1d6"
+    },
+    {
+      "id": "kg-ai-guardian-task-transparency-note",
+      "kind": "task",
+      "title": "Прозрачност: как използваме AI",
+      "path": "tasks/kg-ai-guardian-task-transparency-note.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят иска да информира родителите за употребата на AI в подготовката.",
+      "tags": [
+        "прозрачност",
+        "родители",
+        "информация",
+        "доверие"
+      ],
+      "priority": 50,
+      "dependencies": [],
+      "sha256": "3205a915b81689e789d803157edcba6c82ec5091724ca911189d07d2e60ff8b1"
+    },
+    {
+      "id": "kg-ai-guardian-source-teacher-materials",
+      "kind": "source",
+      "title": "Материали, предоставени от учителя",
+      "path": "sources/kg-ai-guardian-source-teacher-materials.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Когато учителят предоставя текст, план, изображение или бележки.",
+      "tags": [
+        "материали",
+        "учител",
+        "качване",
+        "анонимизация"
+      ],
+      "priority": 45,
+      "dependencies": [],
+      "sha256": "77e434f0bd84dba53a6611099bb7c72547f20f7f7d19109850e5259e29dd0a32"
+    },
+    {
+      "id": "kg-ai-guardian-source-guidance",
+      "kind": "source",
+      "title": "Насоки и нормативна рамка",
+      "path": "sources/kg-ai-guardian-source-guidance.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Когато резултатът се позовава на правила, препоръки или права.",
+      "tags": [
+        "насоки",
+        "GDPR",
+        "СЗО",
+        "УНИЦЕФ",
+        "наредба"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "28b0539b7669ecd2d708413cde9a4032aa7fefcb387cfb5d1e1830ad0fe6ebfa"
+    }
+  ]
+}

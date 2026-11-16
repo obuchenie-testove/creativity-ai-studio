@@ -1,0 +1,322 @@
+{
+  "manifest_schema": "creativity.ds-manifest/1.0",
+  "project": "Creativity Kindergarten Digital Scientist — СЛЕДА-360 (Структурирана Летописна Еволюция на Детската Активност)",
+  "engine": "kg-child-development",
+  "system_name": "СЛЕДА-360 (Структурирана Летописна Еволюция на Детската Активност)",
+  "author_model": "Gemini (Google)",
+  "version": "0.1.0",
+  "release_status": "pilot",
+  "owner": "Creativity LTD / Креативност ЕООД",
+  "updated_on": "2026-11-16",
+  "repository": "obuchenie-testove/creativity-ai-studio",
+  "repository_prefix": "kindergarten-ds/kg-child-development/protocol-bank",
+  "compatibility": "Read access to public GitHub + Markdown instructions; optional Python 3.10+ resolver (kindergarten-ds/scripts/resolve_kg.py).",
+  "visibility_note": "PUBLIC pilot layer for the kindergarten digital-scientist competition. No personal data of children, ever.",
+  "execution_policy": {
+    "git_snapshot": "Resolve default branch to full commit SHA once, and use only that SHA for all files.",
+    "protocol_on_missing": "fail-closed; never substitute imagined contents",
+    "required_protocols": [
+      "kg-child-development-core-governance",
+      "kg-child-development-core-identity",
+      "kg-child-development-core-output"
+    ],
+    "priority": [
+      "system/platform safety",
+      "child protection and privacy",
+      "explicit human constraints",
+      "core protocols",
+      "roles",
+      "task",
+      "sources"
+    ],
+    "review_required": true,
+    "default_task": "kg-child-development-task-observation-structuring",
+    "default_roles": [
+      "kg-child-development-role-observer",
+      "kg-child-development-role-progress-analyst",
+      "kg-child-development-role-support-designer",
+      "kg-child-development-role-ethical-auditor"
+    ],
+    "completer_role": "kg-child-development-role-ethical-auditor",
+    "selection_limits": {
+      "task": 1,
+      "role_min": 1,
+      "role_max": 5,
+      "source": 2
+    },
+    "version_validation": "SHA-256 over UTF-8 raw bytes of each protocol JSON, then check id/version/kind/schema."
+  },
+  "intake_questions": [
+    "За коя възрастова група (първа 3–4 г., втора 4–5 г., трета 5–6 г. или четвърта 6–7 г.) и кой етап (входно, текущо или изходно равнище) се отнася наблюдението?",
+    "Потвърждавате ли, че в предоставените бележки липсват истински имена, снимки или здравни данни на децата (или желаете да ги кодираме като Дете_1, Дете_2)?",
+    "Какъв конкретен работен продукт ви е нужен сега: карта за наблюдение, анализ на напредъка, текст за детско портфолио или идеи за игрова подкрепа?"
+  ],
+  "entries": [
+    {
+      "id": "kg-child-development-core-governance",
+      "kind": "core",
+      "title": "Защита на данните, анти-диагностика и човешки контрол",
+      "path": "core/kg-child-development-core-governance.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги се активира първи при всяко стартиране на скила.",
+      "tags": [
+        "governance",
+        "privacy",
+        "safety",
+        "ethics"
+      ],
+      "priority": 100,
+      "dependencies": [],
+      "sha256": "09f5d8a288233927fd3954bc07f62a6577788ff825047f44177a8aad34d0615b"
+    },
+    {
+      "id": "kg-child-development-core-identity",
+      "kind": "core",
+      "title": "Епистемична идентичност на Дигиталния учен в детската градина",
+      "path": "core/kg-child-development-core-identity.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги се зарежда като рамка на поведение и тон на комуникация.",
+      "tags": [
+        "identity",
+        "methodology",
+        "preschool",
+        "epistemology"
+      ],
+      "priority": 95,
+      "dependencies": [],
+      "sha256": "91f3ec4437423717c22e35e6afe448d6d42a7d2a7d80e97277895f30418435eb"
+    },
+    {
+      "id": "kg-child-development-core-output",
+      "kind": "core",
+      "title": "Стандарт за структуриране и проверимост на резултатите",
+      "path": "core/kg-child-development-core-output.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги се прилага при оформяне на финалния отговор към учителя.",
+      "tags": [
+        "output",
+        "formatting",
+        "audit",
+        "templates"
+      ],
+      "priority": 90,
+      "dependencies": [],
+      "sha256": "b4ba29ab40c9973a6934b1b071f4240580d3aba8d6665e2c9208defd418e7d0e"
+    },
+    {
+      "id": "kg-child-development-role-observer",
+      "kind": "role",
+      "title": "Роля 1: Наблюдател на игровото поведение (Behavioral Observer)",
+      "path": "roles/kg-child-development-role-observer.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Активира се при анализ на сурови бележки или проектиране на карти за наблюдение.",
+      "tags": [
+        "role",
+        "observation",
+        "indicators",
+        "domains"
+      ],
+      "priority": 85,
+      "dependencies": [],
+      "sha256": "204dd4db63b3d6266fa9bab1ad24529f094c183ed1560b7d60d42b5eb7fc910b"
+    },
+    {
+      "id": "kg-child-development-role-progress-analyst",
+      "kind": "role",
+      "title": "Роля 2: Аналитик на индивидуалния напредък (Progress Analyst)",
+      "path": "roles/kg-child-development-role-progress-analyst.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Активира се при проследяване на развитието във времето и подготовка на портфолио.",
+      "tags": [
+        "role",
+        "progress",
+        "baseline",
+        "portfolio"
+      ],
+      "priority": 80,
+      "dependencies": [],
+      "sha256": "24c0bddcba41ecf904f448df2ecc6e69ca979c607a904cf13cd5c0fa62070c94"
+    },
+    {
+      "id": "kg-child-development-role-support-designer",
+      "kind": "role",
+      "title": "Роля 3: Дизайнер на игрова подкрепа (Play Support Designer)",
+      "path": "roles/kg-child-development-role-support-designer.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Активира се при нужда от идеи за индивидуална работа или надграждане на силни страни.",
+      "tags": [
+        "role",
+        "support",
+        "play",
+        "scaffolding"
+      ],
+      "priority": 75,
+      "dependencies": [],
+      "sha256": "e9e419b8994617a7d939f183bc415db41542521d1f69148ed57a3a72a8834917"
+    },
+    {
+      "id": "kg-child-development-role-ethical-auditor",
+      "kind": "role",
+      "title": "Роля 4: Етичен и методически завършващ одитор (Final Auditor)",
+      "path": "roles/kg-child-development-role-ethical-auditor.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Винаги се изпълнява последен преди представяне на отговора на учителя.",
+      "tags": [
+        "role",
+        "auditor",
+        "quality-control",
+        "ethics"
+      ],
+      "priority": 70,
+      "dependencies": [],
+      "sha256": "3666bb39156ad9fa804ed03930ebf16a3eb9c7d1b61fbcbdaf2a69f332672fd4"
+    },
+    {
+      "id": "kg-child-development-task-observation-plan",
+      "kind": "task",
+      "title": "Задача 1: Проектиране на карта и план за педагогическо наблюдение",
+      "path": "tasks/kg-child-development-task-observation-plan.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Когато учителят иска да подготви наблюдение на групата или на конкретно дете.",
+      "tags": [
+        "task",
+        "planning",
+        "rubric",
+        "checklist"
+      ],
+      "priority": 65,
+      "dependencies": [],
+      "sha256": "53268cf78cfaf38f75de90179d011e5bc68c620a3ce0d81af0f6ae322231c49e"
+    },
+    {
+      "id": "kg-child-development-task-observation-structuring",
+      "kind": "task",
+      "title": "Задача 2: Структуриране и анализ на сурови бележки от наблюдение",
+      "path": "tasks/kg-child-development-task-observation-structuring.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Когато учителят подаде свободен текст с впечатления и наблюдения за едно или няколко деца.",
+      "tags": [
+        "task",
+        "notes",
+        "analysis",
+        "structuring"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "b48bbdebeaf97cdc9f1e68926bd428cbfb9483f613bc0cb36262f6100cf82241"
+    },
+    {
+      "id": "kg-child-development-task-baseline-exit-tracking",
+      "kind": "task",
+      "title": "Задача 3: Проследяване на напредъка (Входно / Текущо / Изходно равнище)",
+      "path": "tasks/kg-child-development-task-baseline-exit-tracking.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "В началото, средата или края на учебната година при обобщаване на постиженията.",
+      "tags": [
+        "task",
+        "baseline",
+        "exit-level",
+        "tracking"
+      ],
+      "priority": 55,
+      "dependencies": [],
+      "sha256": "fce0d9927b0e5ec3ded17cad3a835d090989986ca6566303bd4af683dd603719"
+    },
+    {
+      "id": "kg-child-development-task-portfolio-builder",
+      "kind": "task",
+      "title": "Задача 4: Подготовка на структурирани записи за детско портфолио",
+      "path": "tasks/kg-child-development-task-portfolio-builder.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Когато учителят подготвя документи за детското портфолио или за среща с родители.",
+      "tags": [
+        "task",
+        "portfolio",
+        "documentation",
+        "parents"
+      ],
+      "priority": 50,
+      "dependencies": [],
+      "sha256": "67db5236bad806fc10f4419f6b2e8f009727d58e0f6f4a7ba149bafa9f5fd6e4"
+    },
+    {
+      "id": "kg-child-development-task-individual-support",
+      "kind": "task",
+      "title": "Задача 5: Дизайн на план за индивидуална игрова подкрепа",
+      "path": "tasks/kg-child-development-task-individual-support.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Когато наблюдението показва нужда от целенасочена подкрепа в езиковата, социално-емоционалната, когнитивната или двигателната сфера.",
+      "tags": [
+        "task",
+        "intervention",
+        "individual-support",
+        "play-plan"
+      ],
+      "priority": 45,
+      "dependencies": [],
+      "sha256": "ed846d227172d9107f8db75ad2c7c057de9ab2096457d4d1e5d5c51756d55e7a"
+    },
+    {
+      "id": "kg-child-development-source-evidence-standards",
+      "kind": "source",
+      "title": "Източници 1: Научни бази за ранно детско развитие и нормативна рамка",
+      "path": "sources/kg-child-development-source-evidence-standards.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "При търсене на доказателства за етапите на детското развитие или съотнасяне към образователни направления.",
+      "tags": [
+        "source",
+        "openalex",
+        "eric",
+        "regulations"
+      ],
+      "priority": 40,
+      "dependencies": [],
+      "sha256": "91fcdcc4233516c2996d11ddb275a0bf6d181d685f8a40d88cfcbdc8bd41560b"
+    },
+    {
+      "id": "kg-child-development-source-teacher-materials",
+      "kind": "source",
+      "title": "Източници 2: Теренни материали и бележки на учителя",
+      "path": "sources/kg-child-development-source-teacher-materials.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "При всяко подаване на теренни бележки, таблици или описания на ситуации от учителя.",
+      "tags": [
+        "source",
+        "field-notes",
+        "teacher-input",
+        "provenance"
+      ],
+      "priority": 35,
+      "dependencies": [],
+      "sha256": "961c85b4554663b8d2c4cbc88901921c038272b7d1a86691c635ce9eede01737"
+    }
+  ]
+}

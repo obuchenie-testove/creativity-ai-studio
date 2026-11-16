@@ -1,0 +1,323 @@
+{
+  "manifest_schema": "creativity.ds-manifest/1.0",
+  "project": "Creativity Kindergarten Digital Scientist — ТЕРЕЗИЯ",
+  "engine": "kg-evidence-lab",
+  "system_name": "ТЕРЕЗИЯ",
+  "author_model": "DeepSeek",
+  "version": "0.1.0",
+  "release_status": "pilot",
+  "owner": "Creativity LTD / Креативност ЕООД",
+  "updated_on": "2026-11-16",
+  "repository": "obuchenie-testove/creativity-ai-studio",
+  "repository_prefix": "kindergarten-ds/kg-evidence-lab/protocol-bank",
+  "compatibility": "Read access to public GitHub + Markdown instructions; optional Python 3.10+ resolver (kindergarten-ds/scripts/resolve_kg.py).",
+  "visibility_note": "PUBLIC pilot layer for the kindergarten digital-scientist competition. No personal data of children, ever.",
+  "execution_policy": {
+    "git_snapshot": "Resolve default branch to full commit SHA once, and use only that SHA for all files.",
+    "protocol_on_missing": "fail-closed; never substitute imagined contents",
+    "required_protocols": [
+      "kg-evidence-lab-core-governance",
+      "kg-evidence-lab-core-identity",
+      "kg-evidence-lab-core-output"
+    ],
+    "priority": [
+      "system/platform safety",
+      "child protection and privacy",
+      "explicit human constraints",
+      "core protocols",
+      "roles",
+      "task",
+      "sources"
+    ],
+    "review_required": true,
+    "default_task": "kg-evidence-lab-task-claim-check",
+    "default_roles": [
+      "kg-evidence-lab-role-scout",
+      "kg-evidence-lab-role-sieve",
+      "kg-evidence-lab-role-weigher",
+      "kg-evidence-lab-role-translator",
+      "kg-evidence-lab-role-finisher"
+    ],
+    "completer_role": "kg-evidence-lab-role-finisher",
+    "selection_limits": {
+      "task": 1,
+      "role_min": 1,
+      "role_max": 5,
+      "source": 2
+    },
+    "version_validation": "SHA-256 over UTF-8 raw bytes of each protocol JSON, then check id/version/kind/schema."
+  },
+  "intake_questions": [
+    "Кое точно твърдение или методика искате да проверим? (едно изречение)",
+    "За коя възрастова група (3–7 г.) и в каква ситуация — свободна игра, структурирана дейност или режим?",
+    "Имате ли достъп до научни бази през хостинга, или да маркирам непровереното?"
+  ],
+  "entries": [
+    {
+      "id": "kg-evidence-lab-core-governance",
+      "kind": "core",
+      "title": "Управление и етика",
+      "path": "core/kg-evidence-lab-core-governance.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги първи — преди всяка заявка на учителя.",
+      "tags": [
+        "core",
+        "ethics",
+        "child-data",
+        "teacher-authority"
+      ],
+      "priority": 100,
+      "dependencies": [],
+      "sha256": "fa7396f53aac5aeebd3b1069b5afb292df5e6344f2fbc2fdc4ba57601f325867"
+    },
+    {
+      "id": "kg-evidence-lab-core-identity",
+      "kind": "core",
+      "title": "Идентичност на дигиталния учен",
+      "path": "core/kg-evidence-lab-core-identity.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги втори — при първо обръщение или при въпрос „кой си ти?“.",
+      "tags": [
+        "core",
+        "identity",
+        "role",
+        "definition"
+      ],
+      "priority": 95,
+      "dependencies": [],
+      "sha256": "e870d53d5d15f172abb1b33c79b345a4ea772f0a17926df04360eff2dfaa8d01"
+    },
+    {
+      "id": "kg-evidence-lab-core-output",
+      "kind": "core",
+      "title": "Структура на изхода",
+      "path": "core/kg-evidence-lab-core-output.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Винаги последен — преди предаване на отговора на учителя.",
+      "tags": [
+        "core",
+        "output",
+        "verdict",
+        "structure"
+      ],
+      "priority": 90,
+      "dependencies": [],
+      "sha256": "92342e5eef11fc6fbe3ff92487ee2dcec48f0ff5f3e7d029202eb095c68647df"
+    },
+    {
+      "id": "kg-evidence-lab-role-scout",
+      "kind": "role",
+      "title": "Търсач",
+      "path": "roles/kg-evidence-lab-role-scout.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Веднага след като учителят формулира твърдение или методика.",
+      "tags": [
+        "role",
+        "sources",
+        "databases",
+        "search"
+      ],
+      "priority": 70,
+      "dependencies": [],
+      "sha256": "db0aa8e28db7c746823e61d138f704b06e76a61be86892647a25433ce8739906"
+    },
+    {
+      "id": "kg-evidence-lab-role-sieve",
+      "kind": "role",
+      "title": "Пресявач",
+      "path": "roles/kg-evidence-lab-role-sieve.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Веднага след търсача, преди претеглянето.",
+      "tags": [
+        "role",
+        "quality",
+        "filter",
+        "age-match"
+      ],
+      "priority": 68,
+      "dependencies": [],
+      "sha256": "be6b0f4686071c07a97a0b572fa6dc0f45877b6236717b27bbd3027d06be883c"
+    },
+    {
+      "id": "kg-evidence-lab-role-weigher",
+      "kind": "role",
+      "title": "Претеглящ",
+      "path": "roles/kg-evidence-lab-role-weigher.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "След пресявача, преди преводача.",
+      "tags": [
+        "role",
+        "verdict",
+        "synthesis",
+        "justification"
+      ],
+      "priority": 66,
+      "dependencies": [],
+      "sha256": "41d88a8aaa55725a653fcd8023b1f42be58dbc2e25dc725a2f3ffac4ebaf1269"
+    },
+    {
+      "id": "kg-evidence-lab-role-translator",
+      "kind": "role",
+      "title": "Преводач",
+      "path": "roles/kg-evidence-lab-role-translator.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Само ако присъдата е „подкрепено“ или „обещаващо“.",
+      "tags": [
+        "role",
+        "experiment",
+        "criteria",
+        "safety"
+      ],
+      "priority": 64,
+      "dependencies": [],
+      "sha256": "5b4f80c5b08c5128b2278309d417bf312b96fb32e465a9c21d3c55f073dc681d"
+    },
+    {
+      "id": "kg-evidence-lab-role-finisher",
+      "kind": "role",
+      "title": "Завършващ",
+      "path": "roles/kg-evidence-lab-role-finisher.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Винаги последен — преди core-output.",
+      "tags": [
+        "role",
+        "verification",
+        "quality-gate",
+        "final-check"
+      ],
+      "priority": 62,
+      "dependencies": [],
+      "sha256": "6fbe22745a3dd4f296d3928b12a414f02a07cc8e2a74127eaf7d3d55f98fb221"
+    },
+    {
+      "id": "kg-evidence-lab-task-claim-check",
+      "kind": "task",
+      "title": "Проверка на едно твърдение",
+      "path": "tasks/kg-evidence-lab-task-claim-check.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят пита „вярно ли е, че…?“ за едно твърдение.",
+      "tags": [
+        "task",
+        "claim",
+        "single",
+        "verdict"
+      ],
+      "priority": 80,
+      "dependencies": [],
+      "sha256": "08ae163234507cb03535a64288eff71a30ac10014757916f9eddc5f74941729a"
+    },
+    {
+      "id": "kg-evidence-lab-task-method-profile",
+      "kind": "task",
+      "title": "Профил на методика",
+      "path": "tasks/kg-evidence-lab-task-method-profile.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят пита за методика като цяло (Монтесори, Реджо Емилия, STEM, игрово учене).",
+      "tags": [
+        "task",
+        "methodology",
+        "profile",
+        "conditions"
+      ],
+      "priority": 78,
+      "dependencies": [],
+      "sha256": "c35f977e6f5c1207fe72a6af315d371409b3858b31c872fca1298ced3d845376"
+    },
+    {
+      "id": "kg-evidence-lab-task-mini-experiment",
+      "kind": "task",
+      "title": "Дизайн на мини-експеримент",
+      "path": "tasks/kg-evidence-lab-task-mini-experiment.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят иска да провери находка на практика в своята група.",
+      "tags": [
+        "task",
+        "experiment",
+        "design",
+        "criteria"
+      ],
+      "priority": 76,
+      "dependencies": [],
+      "sha256": "19258deab9a6448f99d9d416e508963150b2dff389ceb69da86b65773be0e687"
+    },
+    {
+      "id": "kg-evidence-lab-task-myth-bust",
+      "kind": "task",
+      "title": "Мит или реалност",
+      "path": "tasks/kg-evidence-lab-task-myth-bust.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят посочи популярно вярване, което иска да провери.",
+      "tags": [
+        "task",
+        "myth",
+        "popular-claims",
+        "verdict"
+      ],
+      "priority": 74,
+      "dependencies": [],
+      "sha256": "0f23b9607109361784a69ea8afe863b51af25f6023f5b71290202ba5c2e62b4a"
+    },
+    {
+      "id": "kg-evidence-lab-task-age-fit",
+      "kind": "task",
+      "title": "Съответствие на възрастта",
+      "path": "tasks/kg-evidence-lab-task-age-fit.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят посочи методика и конкретна възраст от диапазона 3–7 г.",
+      "tags": [
+        "task",
+        "age",
+        "adaptation",
+        "evidence-base"
+      ],
+      "priority": 72,
+      "dependencies": [],
+      "sha256": "acc8582cd4b05348303fd8a5202f26b17ff479a2a596c52e5ace7508471530ba"
+    },
+    {
+      "id": "kg-evidence-lab-source-databases",
+      "kind": "source",
+      "title": "Научни бази и нормативни документи",
+      "path": "sources/kg-evidence-lab-source-databases.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Всеки път, когато търсачът започне търсене.",
+      "tags": [
+        "source",
+        "databases",
+        "normative",
+        "access"
+      ],
+      "priority": 50,
+      "dependencies": [],
+      "sha256": "f6f527e9c42a10af3391c6dee66ebf4ea7417f0bb5d1f615f3463c43a4c201ab"
+    }
+  ]
+}

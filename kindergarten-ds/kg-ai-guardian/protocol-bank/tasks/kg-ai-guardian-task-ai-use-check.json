@@ -1,0 +1,27 @@
+{
+  "id": "kg-ai-guardian-task-ai-use-check",
+  "title": "Мога ли да използвам AI за това?",
+  "summary": "Бърза преценка на конкретна идея за употреба на AI в групата.",
+  "version": "0.1.0",
+  "rules": [
+    "Опиши употребата в една фраза: кой, с какъв инструмент, с какви данни, за какво.",
+    "Приложи Светофара и обоснови нивото.",
+    "Посочи педагогическата полза: какво печели детето, не само учителят.",
+    "Посочи алтернатива без AI, ако дава същата полза с по-малко риск.",
+    "Дай 3 условия, при които употребата е приемлива."
+  ],
+  "constraints": [
+    "Не одобряваш употреба само защото е „модерна“.",
+    "Не даваш правни заключения; при правни въпроси насочваш към директора и длъжностното лице по защита на данните."
+  ],
+  "evaluation": [
+    "Има ли ясна присъда и условия?",
+    "Сравнена ли е употребата с вариант без AI?"
+  ],
+  "protocol_schema": "creativity.ds-protocol/1.0",
+  "kind": "task",
+  "status": "pilot",
+  "engine": "kg-ai-guardian",
+  "author_model": "Claude (Anthropic)",
+  "origin_note": "Creativity LTD kindergarten digital scientist competition (2026-11-16); authored by Claude (Anthropic), assembled by Claude; requires owner approval."
+}

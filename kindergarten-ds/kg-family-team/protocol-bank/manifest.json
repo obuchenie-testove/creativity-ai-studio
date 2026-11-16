@@ -1,0 +1,289 @@
+{
+  "manifest_schema": "creativity.ds-manifest/1.0",
+  "project": "Creativity Kindergarten Digital Scientist — Екипен Компас",
+  "engine": "kg-family-team",
+  "system_name": "Екипен Компас",
+  "author_model": "Qwen (Alibaba)",
+  "version": "0.1.0",
+  "release_status": "pilot",
+  "owner": "Creativity LTD / Креативност ЕООД",
+  "updated_on": "2026-11-16",
+  "repository": "obuchenie-testove/creativity-ai-studio",
+  "repository_prefix": "kindergarten-ds/kg-family-team/protocol-bank",
+  "compatibility": "Read access to public GitHub + Markdown instructions; optional Python 3.10+ resolver (kindergarten-ds/scripts/resolve_kg.py).",
+  "visibility_note": "PUBLIC pilot layer for the kindergarten digital-scientist competition. No personal data of children, ever.",
+  "execution_policy": {
+    "git_snapshot": "Resolve default branch to full commit SHA once, and use only that SHA for all files.",
+    "protocol_on_missing": "fail-closed; never substitute imagined contents",
+    "required_protocols": [
+      "kg-family-team-core-governance",
+      "kg-family-team-core-identity",
+      "kg-family-team-core-output"
+    ],
+    "priority": [
+      "system/platform safety",
+      "child protection and privacy",
+      "explicit human constraints",
+      "core protocols",
+      "roles",
+      "task",
+      "sources"
+    ],
+    "review_required": true,
+    "default_task": "kg-family-team-task-adaptation-support",
+    "default_roles": [
+      "kg-family-team-role-observer",
+      "kg-family-team-role-strategist",
+      "kg-family-team-role-verifier"
+    ],
+    "completer_role": "kg-family-team-role-verifier",
+    "selection_limits": {
+      "task": 1,
+      "role_min": 1,
+      "role_max": 5,
+      "source": 2
+    },
+    "version_validation": "SHA-256 over UTF-8 raw bytes of each protocol JSON, then check id/version/kind/schema."
+  },
+  "intake_questions": [
+    "Каква е конкретната ситуация или цел на комуникацията?",
+    "Има ли вече използвани подходи, които не са проработили?",
+    "Какви са силните страни на детето, които могат да бъдат използвани като мост?"
+  ],
+  "entries": [
+    {
+      "id": "kg-family-team-core-governance",
+      "kind": "core",
+      "title": "Управление на данни и етика",
+      "path": "core/kg-family-team-core-governance.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Активира се при всяка заявка, преди обработката на текста.",
+      "tags": [
+        "анонимизация",
+        "етика",
+        "сигурност"
+      ],
+      "priority": 100,
+      "dependencies": [],
+      "sha256": "6aa951c15ced56f24241cd946f78918b84f2919d6cc05f022b0453fdcaf22e9f"
+    },
+    {
+      "id": "kg-family-team-core-identity",
+      "kind": "core",
+      "title": "Идентичност на дигиталния учен",
+      "path": "core/kg-family-team-core-identity.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Активира се при формулиране на крайния отговор към учителя.",
+      "tags": [
+        "роля",
+        "ръководство",
+        "дефиниция"
+      ],
+      "priority": 95,
+      "dependencies": [],
+      "sha256": "3f71eb21f2767e1452ac29189e33d5505cfb9c56bd49e6a44c881a081aecef0f"
+    },
+    {
+      "id": "kg-family-team-core-output",
+      "kind": "core",
+      "title": "Форматиране на изхода",
+      "path": "core/kg-family-team-core-output.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "required",
+      "when": "Активира се при финализиране на текста преди предаване на учителя.",
+      "tags": [
+        "формат",
+        "проверимост",
+        "чернова"
+      ],
+      "priority": 90,
+      "dependencies": [],
+      "sha256": "15054791395f9691b3c89c3a8e5fbb3306ad72ca7896aadce2e4b7b419462528"
+    },
+    {
+      "id": "kg-family-team-role-verifier",
+      "kind": "role",
+      "title": "Завършващ проверяващ",
+      "path": "roles/kg-family-team-role-verifier.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Активира се като последна стъпка преди генериране на изхода.",
+      "tags": [
+        "аудит",
+        "контрол",
+        "качество"
+      ],
+      "priority": 99,
+      "dependencies": [],
+      "sha256": "f4232db613f0a51b694da7e7ced9b7b8828633d742b6a1b4c0e6b9e7b57a5540"
+    },
+    {
+      "id": "kg-family-team-role-observer",
+      "kind": "role",
+      "title": "Наблюдател на фактите",
+      "path": "roles/kg-family-team-role-observer.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Активира се след въвеждане на суровата информация от учителя.",
+      "tags": [
+        "наблюдение",
+        "обективност",
+        "факти"
+      ],
+      "priority": 80,
+      "dependencies": [],
+      "sha256": "8c0e933876180a86ec89011cdf5f94b0c0abb2bdebb2742d0a8e0824be7f6ac2"
+    },
+    {
+      "id": "kg-family-team-role-strategist",
+      "kind": "role",
+      "title": "Педагогически стратег",
+      "path": "roles/kg-family-team-role-strategist.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Активира се след като фактите са структурирани от Наблюдателя.",
+      "tags": [
+        "стратегия",
+        "игра",
+        "развитие"
+      ],
+      "priority": 75,
+      "dependencies": [],
+      "sha256": "ec03f42a8d4ef9c9f3d36d296ec637586e962b70f6d4bdb07b4a04501f3ebd13"
+    },
+    {
+      "id": "kg-family-team-task-difficult-conversation",
+      "kind": "task",
+      "title": "Структуриране на труден разговор",
+      "path": "tasks/kg-family-team-task-difficult-conversation.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят трябва да обсъди проблемно поведение или инцидент с родител.",
+      "tags": [
+        "конфликт",
+        "деликатност",
+        "решения"
+      ],
+      "priority": 85,
+      "dependencies": [],
+      "sha256": "07f57317a141f418ad2cc34e786a6be7a14dd2bbbc1db31db3b3f629f46cb6e2"
+    },
+    {
+      "id": "kg-family-team-task-adaptation-support",
+      "kind": "task",
+      "title": "Подкрепа при адаптация",
+      "path": "tasks/kg-family-team-task-adaptation-support.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят поиска помощ за адаптиране на новоприето дете.",
+      "tags": [
+        "адаптация",
+        "семейство",
+        "планиране"
+      ],
+      "priority": 70,
+      "dependencies": [],
+      "sha256": "d6e5b72f98cccf44805c54367b6fa5318905ee345a55265e67dbf39eb64920a4"
+    },
+    {
+      "id": "kg-family-team-task-parent-meeting-draft",
+      "kind": "task",
+      "title": "Чернова за родителска среща",
+      "path": "tasks/kg-family-team-task-parent-meeting-draft.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят се подготвя за индивидуална или групова родителска среща.",
+      "tags": [
+        "комуникация",
+        "родители",
+        "структура"
+      ],
+      "priority": 65,
+      "dependencies": [],
+      "sha256": "84a81535fe26f6194490bb8768392e2d74b2cc913e4d2c15884a29cfef52eefb"
+    },
+    {
+      "id": "kg-family-team-task-home-activity-bridge",
+      "kind": "task",
+      "title": "Мост към домашни дейности",
+      "path": "tasks/kg-family-team-task-home-activity-bridge.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят иска да ангажира родителите с подкрепящи дейности у дома.",
+      "tags": [
+        "дом",
+        "игра",
+        "ангажираност"
+      ],
+      "priority": 60,
+      "dependencies": [],
+      "sha256": "7cad732284a4c03e3b7043ab1530a834306953f5876b3c527faac027dee068d5"
+    },
+    {
+      "id": "kg-family-team-task-team-coordination",
+      "kind": "task",
+      "title": "Координация в екипа на групата",
+      "path": "tasks/kg-family-team-task-team-coordination.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Учителят търси начин за по-добра синхронизация в екипа.",
+      "tags": [
+        "екип",
+        "колеги",
+        "организация"
+      ],
+      "priority": 55,
+      "dependencies": [],
+      "sha256": "69018638470c2ed5d5749faeb18ad387fa9639ee19d11d7903b40649a250cf63"
+    },
+    {
+      "id": "kg-family-team-source-regulatory",
+      "kind": "source",
+      "title": "Нормативна рамка",
+      "path": "sources/kg-family-team-source-regulatory.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Активира се при нужда от обосновка на педагогическо решение.",
+      "tags": [
+        "ДОС",
+        "регулация",
+        "стандарт"
+      ],
+      "priority": 50,
+      "dependencies": [],
+      "sha256": "d737d2c764733084d7a6be8851311c6d0b2ec803f75ca968983b56394f1a8fe4"
+    },
+    {
+      "id": "kg-family-team-source-pedagogy",
+      "kind": "source",
+      "title": "Педагогика и психология на развитието",
+      "path": "sources/kg-family-team-source-pedagogy.json",
+      "version": "0.1.0",
+      "status": "pilot",
+      "select": "selectable",
+      "when": "Активира се при генериране на стратегии от ролята Стратег.",
+      "tags": [
+        "психология",
+        "развитие",
+        "методика"
+      ],
+      "priority": 45,
+      "dependencies": [],
+      "sha256": "22b1fb70cc58e7ad734973a25a9b97fd4bbbcc8e7460b297e482ea8f94dd093e"
+    }
+  ]
+}
