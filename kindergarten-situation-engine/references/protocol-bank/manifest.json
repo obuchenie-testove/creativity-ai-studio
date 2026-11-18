@@ -1,7 +1,7 @@
 {
   "manifest_schema": "creativity.kg-manifest/1.0",
   "engine": "kindergarten-situation-engine",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "pilot",
   "required_core": [
     "core-governance",
@@ -96,10 +96,10 @@
       "id": "task-situation",
       "title": "Педагогическа ситуация",
       "kind": "task",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "status": "pilot",
       "path": "task/task-situation.json",
-      "sha256": "79989a36be975ddd94826aa886f9e68df4f424dbbabbbd7b74d0cb51a5667efb",
+      "sha256": "920c1a82ca6e26eaca9f082fe911c49da012eb3d72627284cc906ece8a367e65",
       "tags": [
         "ситуация",
         "тема",
