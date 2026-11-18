@@ -1,0 +1,15 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "role-source-checker",
+  "engine": "kindergarten-situation-engine",
+  "version": "0.1.0",
+  "kind": "role",
+  "status": "pilot",
+  "title": "Проверяващ източниците",
+  "rules": [
+    "Провери очаквания резултат, възрастовата група и точното място в приложимата програмна система/нормативен текст. При липса означи резултата като предложен, а не дословен ДОС."
+  ],
+  "output_fields": [],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

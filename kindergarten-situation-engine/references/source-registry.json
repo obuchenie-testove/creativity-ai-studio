@@ -1,0 +1,74 @@
+{
+  "schema": "creativity.kg-sources/1.0",
+  "checked_on": "2026-11-18",
+  "warning": "Discovery registry, not a certified current consolidation of legislation. Fetch the applicable full text and check amendments/effective dates for each task.",
+  "public_sources": [
+    {
+      "id": "mon-regulations",
+      "url": "https://www.mon.bg/dokumentatsiya/normativni-aktove/naredbi/",
+      "purpose": "Откриване на нормативни актове и изменения",
+      "access": "public-web",
+      "status": "discovered"
+    },
+    {
+      "id": "mon-laws",
+      "url": "https://www.mon.bg/dokumentatsiya/normativni-aktove/zakoni/",
+      "purpose": "ЗПУО и изменения",
+      "access": "public-web",
+      "status": "discovered"
+    },
+    {
+      "id": "state-gazette",
+      "url": "https://dv.parliament.bg/DVWeb/index.faces",
+      "purpose": "Проверка на обнародване и влизане в сила",
+      "access": "public-web",
+      "status": "discovery-entry"
+    },
+    {
+      "id": "n5-official-snapshot",
+      "url": "https://ruo.mon.bg/sofia-grad/files/sites/2/2025/01/n_5_preduch.pdf",
+      "purpose": "Наредба № 5 от 03.06.2016 г.; прочетен официален PDF, версия 10.01.2025",
+      "access": "public-web",
+      "status": "historical-snapshot-not-current-certified"
+    },
+    {
+      "id": "n8-official-snapshot",
+      "url": "https://ruo.mon.bg/sofia-grad/files/sites/2/2025/01/n_8.pdf",
+      "purpose": "Наредба № 8 от 11.08.2016 г.; прочетен официален PDF, версия 10.01.2025",
+      "access": "public-web",
+      "status": "historical-snapshot-not-current-certified"
+    },
+    {
+      "id": "n5-draft-2026",
+      "url": "https://www.mon.bg/project-document/proekt-na-naredba-za-izmenenie-i-dopalnenie-na-naredba-%E2%84%96-5-ot-2016-g-za-preduchilisthnoto-obrazovanie-2/",
+      "purpose": "Проект, консултация 10.08–09.09.2026; справка 12.11.2026. Не е доказателство за действаща промяна.",
+      "access": "public-web",
+      "status": "draft-do-not-apply-as-law"
+    },
+    {
+      "id": "neispuo-api-example",
+      "url": "https://extapi-neispuo.mon.bg/students/",
+      "purpose": "Документиран външен интерфейс за резултат от диплома за ВУЗ; X509. Не е общ API за ДГ.",
+      "access": "documentation-only",
+      "status": "not-connected"
+    }
+  ],
+  "private_sources": [
+    {
+      "id": "institution-documents",
+      "provider": "google-drive-or-approved-dms",
+      "resource_id": null,
+      "status": "not-configured",
+      "scope": "read-only-specific-folder",
+      "allowed_content": "обезличени правила, образци, планове и отчети"
+    },
+    {
+      "id": "institution-records",
+      "provider": "approved-database-or-local-export",
+      "resource_id": null,
+      "status": "not-configured",
+      "scope": "read-only-approved-view",
+      "allowed_content": "минимални необходими данни; по подразбиране обобщени или обезличени"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-sequence",
+  "engine": "kindergarten-situation-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Поредица и тематично планиране",
+  "rules": [
+    "Съгласувай предложението с предоставените програмна система и тематично разпределение.",
+    "Построй последователност с връщане към наученото и пренос в нова игра, без механично дублиране.",
+    "Не измисляй нормативен седмичен брой или задължителна продължителност. Провери действащата Наредба № 5 при такъв въпрос."
+  ],
+  "output_fields": [
+    "sequence",
+    "goals",
+    "directions",
+    "progression",
+    "resources",
+    "observation",
+    "curriculum_alignment"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

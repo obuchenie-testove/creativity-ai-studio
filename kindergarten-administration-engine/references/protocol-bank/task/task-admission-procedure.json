@@ -1,0 +1,26 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-admission-procedure",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Прием, отсъствия и административни процедури",
+  "rules": [
+    "Установи общината, вида на ДГ, възрастовата група, конкретния казус и вътрешните правила.",
+    "Прочети приложимите национални и общински актове. Не пренасяй срокове, критерии и такси от друга община.",
+    "Изготви стъпки, необходими документи и проект на комуникация. Не вземай автоматично решение за прием/отписване и не обработвай индивидуални идентификатори в публичен пакет."
+  ],
+  "output_fields": [
+    "jurisdiction",
+    "procedure",
+    "steps",
+    "verified_documents",
+    "deadlines",
+    "responsible_role",
+    "communication_draft",
+    "unresolved"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

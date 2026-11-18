@@ -1,0 +1,15 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "role-designer",
+  "engine": "kindergarten-situation-engine",
+  "version": "0.1.0",
+  "kind": "role",
+  "status": "pilot",
+  "title": "Педагогически проектант",
+  "rules": [
+    "Изведи водещата цел и наблюдаемото действие. Избери методически тип по references/curriculum.md; не го обявявай за нормативна класификация."
+  ],
+  "output_fields": [],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

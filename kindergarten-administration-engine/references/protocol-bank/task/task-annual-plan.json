@@ -1,0 +1,27 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-annual-plan",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Годишно и месечно административно планиране",
+  "rules": [
+    "Прочети стратегията, предходния отчет, актуалните приоритети и съществуващия план, ако са предоставени.",
+    "Свържи всяка дейност с цел, измерим резултат, отговорна длъжност, ресурс, зависимост и доказателство за изпълнение.",
+    "Раздели фиксирани нормативни срокове с източник от предложени управленски дати; не представяй предложена дата като задължителна."
+  ],
+  "output_fields": [
+    "goal",
+    "activity",
+    "owner_role",
+    "proposed_or_legal_deadline",
+    "deadline_source",
+    "resources",
+    "evidence",
+    "dependency",
+    "status"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

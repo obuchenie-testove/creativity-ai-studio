@@ -1,0 +1,30 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-situation",
+  "engine": "kindergarten-situation-engine",
+  "version": "0.1.1",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Педагогическа ситуация",
+  "rules": [
+    "Избери едно водещо направление и възрастова група. Посочи ядро и очакван резултат само от прочетената програмна система/приложим нормативен текст; без тях дай работен фокус и предложен наблюдаем резултат.",
+    "Проектирай игров проблем с избор и действие на детето; учителят пита и подкрепя, а не чете дълъг сценарий.",
+    "Дай начало, игрово изследване, споделяне и наблюдение; включи материали, адаптации и продължение без екран."
+  ],
+  "output_fields": [
+    "topic",
+    "age_group",
+    "leading_direction",
+    "core",
+    "expected_result",
+    "result_source",
+    "observed_action",
+    "materials",
+    "play_steps",
+    "teacher_prompts",
+    "adaptations",
+    "observation"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

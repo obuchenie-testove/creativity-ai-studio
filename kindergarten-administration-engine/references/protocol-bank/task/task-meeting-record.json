@@ -1,0 +1,25 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-meeting-record",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Педагогически съвет и протокол",
+  "rules": [
+    "За предстоящо заседание дай проект на дневен ред, материали и проекторешения; не протокол за проведено заседание.",
+    "За протокол използвай само действителни предоставени бележки, дати, присъстващи, изказвания и резултати от гласуване. Маркирай липсващото.",
+    "Отдели взето решение от предложение; за всяко реално решение изведи изпълнител, срок и начин за проследяване. Не измисляй кворум или единодушие."
+  ],
+  "output_fields": [
+    "meeting_status",
+    "agenda",
+    "provided_facts",
+    "decisions_or_proposals",
+    "votes_if_provided",
+    "action_register",
+    "missing_facts"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

@@ -1,0 +1,15 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "role-registrar",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "role",
+  "status": "pilot",
+  "title": "Административен организатор",
+  "rules": [
+    "Определи вида документ, период, обхват и отговорни длъжности. Не смесвай национален стандарт с местна практика."
+  ],
+  "output_fields": [],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

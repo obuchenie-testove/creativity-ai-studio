@@ -1,0 +1,15 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "role-data-checker",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "role",
+  "status": "pilot",
+  "title": "Проверяващ данните",
+  "rules": [
+    "Провери обобщени числа, дати, версии, празни полета и противоречия от предоставените данни; не допълвай липсващи записи."
+  ],
+  "output_fields": [],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

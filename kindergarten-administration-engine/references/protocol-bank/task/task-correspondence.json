@@ -1,0 +1,25 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-correspondence",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Служебна кореспонденция и справки",
+  "rules": [
+    "Прочети полученото искане и установи адресат, цел, период, срок и минимално нужни данни.",
+    "Подготви проект с проверими факти и източници, отдели приложенията и отговорната длъжност.",
+    "Не изпращай писмото и не разкривай данни на трети лица само защото е създадена чернова."
+  ],
+  "output_fields": [
+    "recipient_role",
+    "subject",
+    "verified_facts",
+    "draft_text",
+    "attachments",
+    "missing_inputs",
+    "dispatch_status"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

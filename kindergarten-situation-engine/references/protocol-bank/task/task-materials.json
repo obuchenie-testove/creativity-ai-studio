@@ -1,0 +1,25 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-materials",
+  "engine": "kindergarten-situation-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Работни материали за учителя",
+  "rules": [
+    "Изработи материали за точно зададената игрова цел и възраст.",
+    "Съпроводи всяка карта/история с действие на детето и начин за наблюдение; не превръщай ситуацията в тест само за правилни отговори.",
+    "Без лични данни, реклама или задължителни детски акаунти. За изпълним HTML артефакт използвай отделен наличен инструмент/скилл и реално тестване."
+  ],
+  "output_fields": [
+    "goal",
+    "materials",
+    "use_in_play",
+    "teacher_prompts",
+    "observation",
+    "accessibility",
+    "rights"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

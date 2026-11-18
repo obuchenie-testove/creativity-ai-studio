@@ -1,0 +1,29 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-document-map",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Карта на документацията",
+  "rules": [
+    "Установи вида на ДГ, общината, учебната година, длъжността на заявителя и наличния списък с документи.",
+    "Раздели доказано задължителни, условно приложими, вътрешни и предложени документи. Без проверен източник използвай кандидат, а не задължителен.",
+    "За всеки документ посочи цел, съставител, проверяващ/утвърждаващ, период, място и достъп, основание и непопълнени полета. Не измисляй срок на съхранение."
+  ],
+  "output_fields": [
+    "document_id",
+    "title",
+    "applicability",
+    "owner_role",
+    "approver_role",
+    "period",
+    "legal_source_locator",
+    "storage",
+    "access",
+    "retention_basis",
+    "gaps"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

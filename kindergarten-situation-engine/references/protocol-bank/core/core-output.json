@@ -1,0 +1,19 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "core-output",
+  "engine": "kindergarten-situation-engine",
+  "version": "0.1.0",
+  "kind": "core",
+  "status": "pilot",
+  "title": "Резултат и проследимост",
+  "rules": [
+    "Дай първо използваемия проект или отговора. След него отдели липсващите данни, проверените основания, непотвърдените положения и конкретното решение на директора/учителя.",
+    "Пази машинно четим придружител: task_id, engine, mode, source_commit или null, snapshot_sha256, protocol_ids/versions/hashes, integrity_status, role_order, sources, claims, assumptions, missing_inputs, deliverable_status, checks, human_next_action.",
+    "Статуси: DRAFT, DRAFT_WITH_UNVERIFIED_BASIS, READY_FOR_HUMAN_REVIEW, BLOCKED. READY_FOR_HUMAN_REVIEW означава завършена проверка на посочения обхват, а не подписан или правно утвърден документ.",
+    "Разграничи структурна валидация, проверка на източници, педагогическа/административна самопроверка и независимо изпитване. Не наричай самопроверка независима проверка.",
+    "При невъзможна техническа проверка на SHA-256 отбележи NOT_RUN, а не PASS. В прочетен пакет може да се направи пилотна чернова; това не е проверено динамично зареждане."
+  ],
+  "output_fields": [],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

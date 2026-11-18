@@ -1,0 +1,27 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-regulation-change",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Проверка за нормативна промяна",
+  "rules": [
+    "Установи точно заглавие, номер, година, стара версия и дата на прилагане; различни наредби със същия номер не са един акт.",
+    "Сравни пълни версии и Държавен вестник, отчети влизане в сила и преходни правила. Проект за обществена консултация не е действаща норма.",
+    "Изведи само доказаните промени, засегнати документи и действия; при недостъпна версия маркирай невъзможното сравнение."
+  ],
+  "output_fields": [
+    "act_identity",
+    "old_version",
+    "new_version",
+    "publication",
+    "effective_date",
+    "changes",
+    "affected_documents",
+    "actions",
+    "unverified"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

@@ -1,0 +1,25 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-order-draft",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Проект на заповед",
+  "rules": [
+    "Определи предмет, компетентен орган, факти, адресати и реално проверено основание.",
+    "Използвай [НОМЕР], [ДАТА], [ИМЕ/ДЛЪЖНОСТ] и [ОСНОВАНИЕ ЗА ПРОВЕРКА] при липса на данни; не попълвай измислени членове.",
+    "Разпиши разпоредителна част, конкретни задачи, срокове и контрол. Добави връчване/обжалване само след проверка на приложимостта."
+  ],
+  "output_fields": [
+    "document_header",
+    "basis",
+    "operative_part",
+    "responsibilities",
+    "deadlines",
+    "control",
+    "unverified_fields"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}
