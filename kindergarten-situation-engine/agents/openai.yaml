@@ -1,0 +1,4 @@
+interface:
+  display_name: "Педагогическа ситуация"
+  short_description: "Игрово планиране по направления и възрастови групи"
+  default_prompt: "Използвай $pedagogicheska-situatsiya за игрова педагогическа ситуация по зададена тема и възрастова група."

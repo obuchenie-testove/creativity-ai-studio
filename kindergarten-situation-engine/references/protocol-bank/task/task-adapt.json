@@ -1,0 +1,25 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-adapt",
+  "engine": "kindergarten-situation-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Адаптиране на ситуация",
+  "rules": [
+    "Запази педагогическата цел и промени задачата, езика, материалите, подкрепата и начина за участие според групата.",
+    "За смесена група дай обща игрова мисия с различни действия и опори; не дели децата на етикети.",
+    "Не поставяй диагноза. Използвай само обобщени потребности; адаптацията е педагогическо предложение."
+  ],
+  "output_fields": [
+    "original_goal",
+    "age_groups",
+    "common_mission",
+    "variants",
+    "supports",
+    "participation",
+    "observation"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

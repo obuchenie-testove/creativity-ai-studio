@@ -1,0 +1,15 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "role-completer",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "role",
+  "status": "pilot",
+  "title": "Завършващ",
+  "rules": [
+    "Провери пълнота, съгласуваност и изпълнимост. Завърши с липсващото, статуса и конкретния човешки контрол."
+  ],
+  "output_fields": [],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

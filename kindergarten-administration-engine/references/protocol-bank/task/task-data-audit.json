@@ -1,0 +1,27 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-data-audit",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Проверка на данни и подготовка за НЕИСПУО",
+  "rules": [
+    "Установи конкретен разрешен набор/изглед или обезличен експорт, период, колони и очаквана схема. Не приемай достъп до целия регистър.",
+    "Провери липсващи стойности, типове, дублирани ключове, дати и съгласуваност на общите суми; не поправяй източника автоматично.",
+    "Върни обобщени дефекти и преобразувателна карта. Експортът за НЕИСПУО изисква потвърдена актуална схема; не измисляй формат или endpoint."
+  ],
+  "output_fields": [
+    "dataset_scope",
+    "schema_version",
+    "row_count",
+    "missing_counts",
+    "duplicate_counts",
+    "consistency_checks",
+    "mapping",
+    "unresolved",
+    "write_status"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

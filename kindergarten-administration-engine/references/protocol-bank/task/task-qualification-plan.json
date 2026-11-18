@@ -1,0 +1,28 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-qualification-plan",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Квалификация и развитие на екипа",
+  "rules": [
+    "Свържи нуждите от квалификация с наблюдавани затруднения, стратегия и предоставени данни за екипа.",
+    "Провери актуалната Наредба № 15 от 22.07.2019 г. за часове, кредити, форми и отчетност преди числови изисквания.",
+    "Раздели вътрешна и външна квалификация; не приписвай кредити или регистрация на доставчик без доказателство."
+  ],
+  "output_fields": [
+    "need",
+    "objective",
+    "format",
+    "participants_roles",
+    "hours_if_verified",
+    "credits_if_verified",
+    "provider_evidence",
+    "budget",
+    "evaluation",
+    "legal_source"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

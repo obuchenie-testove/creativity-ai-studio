@@ -1,0 +1,10 @@
+{
+  "schema": "creativity.kg-deployment/1.0",
+  "repository": "obuchenie-testove/creativity-ai-studio",
+  "branch": "codex/kg-administration-2026-11-18",
+  "prefix": "kindergarten-administration-engine",
+  "seed_commit": null,
+  "status": "pilot-draft-branch",
+  "auto_update": "only-at-invocation-with-permitted-network-read",
+  "legal_sources_current": false
+}

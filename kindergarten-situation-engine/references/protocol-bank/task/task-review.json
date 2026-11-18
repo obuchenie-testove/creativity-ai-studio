@@ -1,0 +1,24 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-review",
+  "engine": "kindergarten-situation-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Преглед на готова ситуация",
+  "rules": [
+    "Провери съгласуваност цел → действие → наблюдение и възрастова достъпност.",
+    "Отдели правните основания от методическите предложения, поправи смесването на основна и допълнителна форма.",
+    "Посочи конкретния проблем и редакцията му, запази работещите части; не обявявай общо нормативно съответствие при непроверени източници."
+  ],
+  "output_fields": [
+    "findings",
+    "severity",
+    "evidence",
+    "proposed_edits",
+    "retained_strengths",
+    "unverified_basis"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

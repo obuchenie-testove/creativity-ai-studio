@@ -1,0 +1,299 @@
+{
+  "manifest_schema": "creativity.kg-manifest/1.0",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "status": "pilot",
+  "required_core": [
+    "core-governance",
+    "core-evidence",
+    "core-output"
+  ],
+  "default_roles": [
+    "role-registrar",
+    "role-source-checker",
+    "role-author",
+    "role-completer"
+  ],
+  "completer_role": "role-completer",
+  "selection_limits": {
+    "role_min": 1,
+    "role_max": 5,
+    "tasks": 1,
+    "source_max": 2
+  },
+  "entries": [
+    {
+      "id": "core-governance",
+      "title": "Правомощия и защита на данните",
+      "kind": "core",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "core/core-governance.json",
+      "sha256": "5f323fb5ef675e9903d877dd66f73293c9b226322fcca7c87a991584ed809290",
+      "tags": []
+    },
+    {
+      "id": "core-evidence",
+      "title": "Източници и нормативна актуалност",
+      "kind": "core",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "core/core-evidence.json",
+      "sha256": "f26cfd893848f271e809fe6694ff991155b2c94f9d698a7ce7febcc288498efd",
+      "tags": []
+    },
+    {
+      "id": "core-output",
+      "title": "Резултат и проследимост",
+      "kind": "core",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "core/core-output.json",
+      "sha256": "8d37269c14803a9372f5ca73ee27fc8c3738fa1ddcf410b413a2feb8554f46f1",
+      "tags": []
+    },
+    {
+      "id": "role-registrar",
+      "title": "Административен организатор",
+      "kind": "role",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "role/role-registrar.json",
+      "sha256": "fdf218739f4851794327c1c05a0f4f5bb9b813274ac52636ea57135607144984",
+      "tags": []
+    },
+    {
+      "id": "role-source-checker",
+      "title": "Проверяващ основанията",
+      "kind": "role",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "role/role-source-checker.json",
+      "sha256": "d5e3bf72404a66f526e3cf51c54ee6ef570a317de618870fc985bedbd10aa594",
+      "tags": []
+    },
+    {
+      "id": "role-author",
+      "title": "Автор на проекта",
+      "kind": "role",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "role/role-author.json",
+      "sha256": "0bcbd0275d19e1ab40968c6833415b64d57131a2cb473983b256de092490fd68",
+      "tags": []
+    },
+    {
+      "id": "role-data-checker",
+      "title": "Проверяващ данните",
+      "kind": "role",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "role/role-data-checker.json",
+      "sha256": "d18837f9847ba555f9439b7158aeeaef2f8be664bbffff1281710c474f4fc93e",
+      "tags": []
+    },
+    {
+      "id": "role-completer",
+      "title": "Завършващ",
+      "kind": "role",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "role/role-completer.json",
+      "sha256": "cbc67c030f0df5937aafe63796aae03d4d7eb2ba8228de5febab05e6712c440a",
+      "tags": []
+    },
+    {
+      "id": "task-document-map",
+      "title": "Карта на документацията",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-document-map.json",
+      "sha256": "8e11dc4a6937620d92d4f7602b0e79cf4cf91d6412beb99218c6462ad743678c",
+      "tags": [
+        "документация",
+        "документи",
+        "карта",
+        "инвентар"
+      ]
+    },
+    {
+      "id": "task-annual-plan",
+      "title": "Годишно и месечно административно планиране",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-annual-plan.json",
+      "sha256": "84538c7982db0a09bc5affa7b1479e7ed0894ace0df823aad90a165efc55fc2b",
+      "tags": [
+        "годишен план",
+        "месечен",
+        "календар",
+        "планиране"
+      ]
+    },
+    {
+      "id": "task-order-draft",
+      "title": "Проект на заповед",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-order-draft.json",
+      "sha256": "916aadb1c3aac9661c25889f466591a8f8baf2d67b20c353b25a4e5e1eb39a07",
+      "tags": [
+        "заповед",
+        "комисия",
+        "възлагане"
+      ]
+    },
+    {
+      "id": "task-meeting-record",
+      "title": "Педагогически съвет и протокол",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-meeting-record.json",
+      "sha256": "a837c5d1a12475de6f439f9e73d47613508ab350fd3d1eca22720425fce250cc",
+      "tags": [
+        "педагогически съвет",
+        "протокол",
+        "заседание"
+      ]
+    },
+    {
+      "id": "task-qualification-plan",
+      "title": "Квалификация и развитие на екипа",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-qualification-plan.json",
+      "sha256": "1455ac18c1898900de4dcc2e9e0558dd3f16a3f3d23c7a0759af4db6ea1203ea",
+      "tags": [
+        "квалификация",
+        "квалификационен",
+        "обучения"
+      ]
+    },
+    {
+      "id": "task-control-plan",
+      "title": "Контролна дейност и подготовка за проверка",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-control-plan.json",
+      "sha256": "70907835b0ff814fb048fa5b492eafa1b20c2f06730b7f2e88f525eaad0430b8",
+      "tags": [
+        "контрол",
+        "проверка",
+        "инспекция",
+        "одит"
+      ]
+    },
+    {
+      "id": "task-correspondence",
+      "title": "Служебна кореспонденция и справки",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-correspondence.json",
+      "sha256": "33eb6b816a6c35b0ecdda6a893625087136fb360e26246c71c4c1e4d0f0cb89e",
+      "tags": [
+        "писмо",
+        "справка",
+        "отговор",
+        "кореспонденция",
+        "заявление"
+      ]
+    },
+    {
+      "id": "task-data-audit",
+      "title": "Проверка на данни и подготовка за НЕИСПУО",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-data-audit.json",
+      "sha256": "7614f4a6a442a1df6263d84b586734fd8433a3d0f6dbb1ee8f518c7f9ee26533",
+      "tags": [
+        "данни",
+        "неиспуо",
+        "csv",
+        "таблица",
+        "дублиране"
+      ]
+    },
+    {
+      "id": "task-regulation-change",
+      "title": "Проверка за нормативна промяна",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-regulation-change.json",
+      "sha256": "b3403d0e6a7ba98391c89298d9f62fbfe0cfb05e4fb7d914f61eeed7e69ef5f4",
+      "tags": [
+        "изменение",
+        "промяна",
+        "наредба",
+        "действащ",
+        "закон"
+      ]
+    },
+    {
+      "id": "task-admission-procedure",
+      "title": "Прием, отсъствия и административни процедури",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-admission-procedure.json",
+      "sha256": "a4cff5caf508c3d1e19bde765af62fd53f37b12fd45e31b9d86a9eef6e652fa7",
+      "tags": [
+        "прием",
+        "отсъствия",
+        "отписване",
+        "записване"
+      ]
+    },
+    {
+      "id": "task-archive-map",
+      "title": "Архивиране и достъп до документацията",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-archive-map.json",
+      "sha256": "c2475b7d93c2f34ce6dfe62f3b557ea92eecae4d56fb78ba7df621fbe6c1139b",
+      "tags": [
+        "архив",
+        "съхранение",
+        "достъп",
+        "унищожаване"
+      ]
+    },
+    {
+      "id": "source-official",
+      "title": "Публични официални източници",
+      "kind": "source",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "source/source-official.json",
+      "sha256": "c08d0afc3497c316d085eb37d66e20938b0d94081a22b11f58e62320386c8590",
+      "tags": []
+    },
+    {
+      "id": "source-internal",
+      "title": "Вътрешни документи и разрешени данни",
+      "kind": "source",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "source/source-internal.json",
+      "sha256": "29c7680a9b2ddd7985e4c7b003e343ff5235a0607faa44218496d604b897f160",
+      "tags": []
+    }
+  ],
+  "task_roles": {
+    "task-data-audit": [
+      "role-registrar",
+      "role-source-checker",
+      "role-data-checker",
+      "role-completer"
+    ]
+  }
+}

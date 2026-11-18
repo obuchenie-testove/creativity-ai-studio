@@ -1,0 +1,27 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-archive-map",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Архивиране и достъп до документацията",
+  "rules": [
+    "Изискай утвърдената номенклатура и приложимите правила за съхранение; липсващ срок остава непотвърден.",
+    "Разграничи вид документ, оригинал/копие, носител, място, отговорна длъжност, достъп и срок с източник.",
+    "Предлагай организация и проверка на пълнотата. Не изтривай архив и не препоръчвай конкретно унищожаване без установен ред и правомощие."
+  ],
+  "output_fields": [
+    "document_type",
+    "original_or_copy",
+    "medium",
+    "location",
+    "owner_role",
+    "access",
+    "retention_period",
+    "retention_source",
+    "review_needed"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

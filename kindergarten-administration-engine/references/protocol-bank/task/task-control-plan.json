@@ -1,0 +1,27 @@
+{
+  "protocol_schema": "creativity.kg-protocol/1.0",
+  "id": "task-control-plan",
+  "engine": "kindergarten-administration-engine",
+  "version": "0.1.0",
+  "kind": "task",
+  "status": "pilot",
+  "title": "Контролна дейност и подготовка за проверка",
+  "rules": [
+    "Определи предмет, период, критерий и документален обхват. Не смесвай вътрешен контрол с външна инспекция.",
+    "Направи матрица изискване → доказателство → наличност → пропуск → коригираща мярка → отговорна длъжност.",
+    "Формулирай констатации само от прочетени доказателства; липса на предоставен файл не доказва липса на документ в ДГ."
+  ],
+  "output_fields": [
+    "requirement",
+    "basis",
+    "evidence",
+    "availability",
+    "finding_scope",
+    "gap",
+    "corrective_action",
+    "owner_role",
+    "due_date"
+  ],
+  "author": "ChatGPT (OpenAI)",
+  "brand": "Creativity LTD"
+}

@@ -1,0 +1,189 @@
+{
+  "manifest_schema": "creativity.kg-manifest/1.0",
+  "engine": "kindergarten-situation-engine",
+  "version": "0.1.0",
+  "status": "pilot",
+  "required_core": [
+    "core-governance",
+    "core-evidence",
+    "core-output"
+  ],
+  "default_roles": [
+    "role-designer",
+    "role-source-checker",
+    "role-adapter",
+    "role-completer"
+  ],
+  "completer_role": "role-completer",
+  "selection_limits": {
+    "role_min": 1,
+    "role_max": 5,
+    "tasks": 1,
+    "source_max": 2
+  },
+  "entries": [
+    {
+      "id": "core-governance",
+      "title": "Правомощия и защита на данните",
+      "kind": "core",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "core/core-governance.json",
+      "sha256": "d17f7e3c965434c7294b46223315e7aec0002e7aaa48549f116f5dbf09f1c1b2",
+      "tags": []
+    },
+    {
+      "id": "core-evidence",
+      "title": "Източници и нормативна актуалност",
+      "kind": "core",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "core/core-evidence.json",
+      "sha256": "3848bf4a196da1ee58a60c8181e9936b7e2d69a02f7a08aa7372c43bc8848d2e",
+      "tags": []
+    },
+    {
+      "id": "core-output",
+      "title": "Резултат и проследимост",
+      "kind": "core",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "core/core-output.json",
+      "sha256": "57f567d340f383df033b4784b3f8e8188afd6819178a04a188dd351dfc2c34e3",
+      "tags": []
+    },
+    {
+      "id": "role-designer",
+      "title": "Педагогически проектант",
+      "kind": "role",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "role/role-designer.json",
+      "sha256": "958b24243010dcdd3d5c9061758994c4f83b0dbd1efa4276dea3c0364b92beb5",
+      "tags": []
+    },
+    {
+      "id": "role-source-checker",
+      "title": "Проверяващ източниците",
+      "kind": "role",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "role/role-source-checker.json",
+      "sha256": "70f470dd981e14aa146b3e19230fb9ad75bcde594e7cbedd76e0e51a6cc16715",
+      "tags": []
+    },
+    {
+      "id": "role-adapter",
+      "title": "Адаптиращ педагог",
+      "kind": "role",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "role/role-adapter.json",
+      "sha256": "7492de9506eb6050a439d89a1cc1a71d96508e71f8d662ee55c742f1c69474a4",
+      "tags": []
+    },
+    {
+      "id": "role-completer",
+      "title": "Завършващ",
+      "kind": "role",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "role/role-completer.json",
+      "sha256": "82b154f0d703dd768205a591b5245f6cde427343365d19c71d258ff39724650c",
+      "tags": []
+    },
+    {
+      "id": "task-situation",
+      "title": "Педагогическа ситуация",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-situation.json",
+      "sha256": "79989a36be975ddd94826aa886f9e68df4f424dbbabbbd7b74d0cb51a5667efb",
+      "tags": [
+        "ситуация",
+        "тема",
+        "занимание"
+      ]
+    },
+    {
+      "id": "task-adapt",
+      "title": "Адаптиране на ситуация",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-adapt.json",
+      "sha256": "7220b42a6394f40d1f34fddc990977660034a32ddc3fcbff8809ffad66859200",
+      "tags": [
+        "адаптирай",
+        "адаптация",
+        "смесена",
+        "различни възрасти"
+      ]
+    },
+    {
+      "id": "task-sequence",
+      "title": "Поредица и тематично планиране",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-sequence.json",
+      "sha256": "b1fef06f5ba3514d0b4ffb795b732647279259d92fdf5addbb48fbbbfa10c742",
+      "tags": [
+        "поредица",
+        "седмица",
+        "тематично"
+      ]
+    },
+    {
+      "id": "task-review",
+      "title": "Преглед на готова ситуация",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-review.json",
+      "sha256": "6ad09de220013509b4ed8a441cda433c94a23767eba2ee77ee24d76610e32276",
+      "tags": [
+        "провери",
+        "преглед",
+        "оцени",
+        "готова"
+      ]
+    },
+    {
+      "id": "task-materials",
+      "title": "Работни материали за учителя",
+      "kind": "task",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "task/task-materials.json",
+      "sha256": "dcff0976f00ec68bb714a6c610cecc08485c5b8ddbfa674529380fdfa0fb8710",
+      "tags": [
+        "материали",
+        "карти",
+        "приказка",
+        "въпроси"
+      ]
+    },
+    {
+      "id": "source-official",
+      "title": "Публични официални източници",
+      "kind": "source",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "source/source-official.json",
+      "sha256": "51a71a34240f301d7aa4958c50a12749cf27fccb386398a13405ccf3a2589d6d",
+      "tags": []
+    },
+    {
+      "id": "source-internal",
+      "title": "Вътрешни документи и разрешени данни",
+      "kind": "source",
+      "version": "0.1.0",
+      "status": "pilot",
+      "path": "source/source-internal.json",
+      "sha256": "56cf3111274cbd795c35ffa94e8890e9c8d21f67bdb8cbb99147c10da170e1a4",
+      "tags": []
+    }
+  ]
+}
